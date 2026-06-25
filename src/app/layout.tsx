@@ -17,7 +17,7 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const baseUrl = `https://${process.env.CURRENT_SITE_DOMAIN || "eastpark.caracas.com"}`;
+const baseUrl = `https://${process.env.CURRENT_SITE_DOMAIN}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),

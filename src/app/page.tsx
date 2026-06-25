@@ -92,8 +92,8 @@ function About() {
         <div className="section-divider" />
       </ScrollReveal>
       <ScrollReveal>
-        <p className="about-text">{t.about.p1}</p>
-        <p className="about-text">{t.about.p2}</p>
+        <p className="about-text" style={{ whiteSpace: "pre-line" }}>{t.about.p1}</p>
+        <p className="about-text" style={{ whiteSpace: "pre-line" }}>{t.about.p2}</p>
       </ScrollReveal>
       <ScrollReveal>
         <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.4rem", fontWeight: 600, color: "var(--color-deep)", marginBottom: "1rem", marginTop: "2rem" }}>
@@ -143,7 +143,7 @@ function Visiting() {
             {cards.map((c, i) => (
               <div className="info-card" key={i}>
                 <div className="info-card-title">{c.title}</div>
-                <div className="info-card-content">{c.content}</div>
+                <div className="info-card-content" style={{ whiteSpace: "pre-line" }}>{c.content}</div>
                 <div className="info-card-note">{c.note}</div>
               </div>
             ))}
@@ -195,6 +195,21 @@ function Location() {
                 <path d="M7 17L17 7M17 7H7M17 7V17" />
               </svg>
             </a>
+            
+            <div className="contact-info" style={{ marginTop: "2rem", paddingTop: "2rem", borderTop: "1px solid rgba(0,0,0,0.1)" }}>
+              <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.4rem", fontWeight: 600, color: "var(--color-deep)", marginBottom: "1rem" }}>
+                {(t as any).contact?.title || "联系方式"}
+              </h3>
+              <p style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "1.1rem", color: "var(--color-earth)", marginBottom: "0.5rem" }}>
+                <span>📞</span>
+                <a href={`tel:${(t as any).contact?.phone || "+58 212-2732867"}`} style={{ color: "inherit", textDecoration: "none" }}>
+                  {(t as any).contact?.phone || "+58 212-2732867"}
+                </a>
+              </p>
+              <p style={{ fontSize: "0.9rem", color: "var(--color-earth-soft)" }}>
+                {(t as any).contact?.phoneNote || "建议提前致电确认开放情况"}
+              </p>
+            </div>
           </div>
         </div>
       </ScrollReveal>
@@ -245,8 +260,9 @@ function History() {
         </ScrollReveal>
         <ScrollReveal>
           <div className="history-content">
-            <p className="history-text">{(t as any).history?.p1 || "关于公园的生态和科普信息"}</p>
-            <p className="history-text">{(t as any).history?.p2 || "更多详细信息"}</p>
+            <p className="history-text" style={{ whiteSpace: "pre-line" }}>{(t as any).history?.p1}</p>
+            <p className="history-text" style={{ whiteSpace: "pre-line" }}>{(t as any).history?.p2}</p>
+            {(t as any).history?.p3 && <p className="history-text" style={{ whiteSpace: "pre-line" }}>{(t as any).history?.p3}</p>}
           </div>
         </ScrollReveal>
       </div>
