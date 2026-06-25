@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description: "管理您的 Cookie 偏好设置",
 };
 
-export default function CookiesPage() {
-  return <CookiesClient />;
+export default async function CookiesPage({ params }: { params: Promise<{ lang: string }> }) {
+  const resolvedParams = await params;
+  return <CookiesClient lang={resolvedParams.lang} />;
 }

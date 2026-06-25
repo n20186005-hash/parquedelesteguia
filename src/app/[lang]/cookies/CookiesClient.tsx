@@ -12,7 +12,7 @@ type CookieCategory = {
   alwaysActive?: boolean;
 };
 
-export default function CookiesClient() {
+export default function CookiesClient({ lang }: { lang?: string }) {
   const [cookieSettings, setCookieSettings] = useState<CookieCategory[]>([
     {
       id: "necessary",
@@ -167,7 +167,7 @@ export default function CookiesClient() {
         </div>
 
         <div style={{ marginTop: "3rem", paddingTop: "2rem", borderTop: "1px solid rgba(0,0,0,0.1)" }}>
-          <Link href="/" style={{ color: "var(--color-teal)", textDecoration: "none" }}>
+          <Link href={`/${lang || ""}`} style={{ color: "var(--color-teal)", textDecoration: "none" }}>
             ← 返回首页
           </Link>
         </div>
