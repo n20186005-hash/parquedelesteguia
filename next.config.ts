@@ -1,10 +1,6 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  output: "export",
-  webpack: (config, { isServer }) => {
-    return config;
-  },
+const nextConfig = {
+  output: "standalone" as const,
+  webpack: (config: unknown) => config,
 };
 
 export default nextConfig;
