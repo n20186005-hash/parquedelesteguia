@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --webpack",
-    "build": "next build --webpack",
-    "build:cf": "next build --webpack && opennextjs-cloudflare build --skipNextBuild",
+    "build": "next build --webpack && opennextjs-cloudflare build --skipNextBuild",
+    "build:cf": "npm run build",
     "start": "next start",
     "lint": "eslint",
     "deploy": "opennextjs-cloudflare deploy",
