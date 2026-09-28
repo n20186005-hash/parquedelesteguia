@@ -41,3 +41,10 @@ next-env.d.ts
 
 # project specific
 pozos-azules.txt
+
+# opennext / cloudflare
+/.open-next/
+/.wrangler/
+/.dev.vars
+/wrangler.jsonc
+/open-next.config.ts
