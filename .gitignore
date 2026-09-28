@@ -46,5 +46,6 @@ pozos-azules.txt
 /.open-next/
 /.wrangler/
 /.dev.vars
-/wrangler.jsonc
-/open-next.config.ts
+# wrangler.jsonc 与 open-next.config.ts 需提交，供 Cloudflare 部署时直接读取（不再触发 migrate 二次构建）
+# /wrangler.jsonc
+# /open-next.config.ts
