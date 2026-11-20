@@ -46,6 +46,9 @@ export default async function NearbyPlace({ params }: Props) {
   const data = nearbyPlaces[place];
   const extra = nearbyDetails[lang][place];
   const detailLabels = nearbyDetailLabels[lang];
+  const distinctObservation = extra.observe !== copy.description && extra.observe !== extra.photo;
+  const distinctVisitTip = copy.plan !== extra.faq[1];
+  const walk = extra.walk.filter((step) => step !== copy.transit);
   const languageNames = { es: "Español", en: "English", zh: "中文" };
   return (
     <main className="section">
@@ -77,22 +80,27 @@ export default async function NearbyPlace({ params }: Props) {
         <section>
           <h2 className="info-card-title">{detailLabels.history}</h2>
           <p className="about-text">{copy.history}</p>
-          <p className="about-text">{extra.observe}</p>
+          {distinctObservation && <p className="about-text">{extra.observe}</p>}
         </section>
-        <section>
-          <h2 className="info-card-title">{detailLabels.visit}</h2>
-          <p className="about-text">{copy.plan}</p>
-        </section>
+        {distinctVisitTip && (
+          <section>
+            <h2 className="info-card-title">{detailLabels.visit}</h2>
+            <p className="about-text">{copy.plan}</p>
+          </section>
+        )}
         <div className="info-grid" style={{ marginBlock: "2rem" }}>
           <section className="info-card">
             <h2 className="info-card-title">{labels.basics}</h2>
             <p>{copy.basics}</p>
-            <p>{data.address}</p>
+            <address style={{ fontStyle: "normal" }}>
+              <a href={data.map}>{data.address}</a>
+            </address>
           </section>
           <section className="info-card">
             <h2 className="info-card-title">{labels.transport}</h2>
             <p>{copy.transit}</p>
-            <Link href={`/${lang}/guide/como-llegar`}>{labels.park}</Link>
+            <a href={data.map}>{data.address}</a>
+            <p><Link href={`/${lang}/guide/como-llegar`}>{labels.park}</Link></p>
           </section>
           <section className="info-card">
             <h2 className="info-card-title">{labels.reviews}</h2>
@@ -106,7 +114,7 @@ export default async function NearbyPlace({ params }: Props) {
         <section style={{ marginBlock: "2rem" }}>
           <h2 className="info-card-title">{detailLabels.walk}</h2>
           <ol className="about-text" style={{ listStyle: "decimal", paddingInlineStart: "1.5rem" }}>
-            {extra.walk.map((step) => <li key={step}>{step}</li>)}
+            {walk.map((step) => <li key={step}>{step}</li>)}
           </ol>
         </section>
         <section style={{ marginBlock: "2rem" }}>
