@@ -6,6 +6,13 @@ export const nearbyDetailLabels = {
 
 export const nearbyDetails = {
   es: {
+    "la-estancia": {
+      about: "La sede de Altamira conserva el carácter de una hacienda dentro de un corredor urbano concurrido. Su programación incluye actividades artísticas y culturales.",
+      observe: "Compara la transición de la avenida al jardín con la escala doméstica de la casa histórica. Desde el jardín, fíjate en cómo se relaciona la fachada con los senderos.",
+      walk: ["Sal del metro Altamira hacia la avenida Francisco de Miranda.", "Localiza el acceso señalizado del centro y consulta la programación.", "Recorre los senderos abiertos y, al salir, vuelve hacia Plaza Francia."],
+      photo: "Desde un sendero abierto, encuadra la casa junto con la vegetación del jardín. Pregunta antes de fotografiar las obras en exposición.",
+      faq: ["¿Se puede visitar el jardín y una exposición el mismo día?", "Consulta qué salas y zonas exteriores están abiertas en la fecha de tu visita. La programación de las exposiciones puede cambiar."],
+    },
     "plaza-francia": {
       about: "La Alcaldía de Chacao ha realizado trabajos de recuperación en esta plaza, que conecta la estación Altamira con el espacio público del barrio.",
       observe: "Observa cómo la línea vertical del obelisco contrasta con la extensión horizontal de la plaza y cómo cambia su silueta al rodearlo.",
@@ -29,6 +36,13 @@ export const nearbyDetails = {
     },
   },
   en: {
+    "la-estancia": {
+      about: "Altamira’s site retains the character of an estate on a busy urban corridor. The centre hosts arts and cultural programmes.",
+      observe: "Notice the shift from the avenue into the garden and the domestic scale of the historic house. From the garden, compare the facade with the line of the paths.",
+      walk: ["Exit Altamira station toward Avenida Francisco de Miranda.", "Find the signed centre entrance and check the programme.", "Walk the open garden paths and head back toward Plaza Francia when you leave."],
+      photo: "Frame the house and garden planting from an open path. Ask whether photography is allowed in the exhibition rooms.",
+      faq: ["Can I see the garden and an exhibition on the same day?", "Check which outdoor areas and galleries are open on your visit date. Exhibition schedules can vary."],
+    },
     "plaza-francia": {
       about: "Chacao’s municipal government has carried out restoration work on this square, which connects Altamira station to the neighbourhood’s public space.",
       observe: "Look for the contrast between the vertical obelisk and the low, open square. Walk around the monument to see the silhouette from another side.",
@@ -52,6 +66,13 @@ export const nearbyDetails = {
     },
   },
   zh: {
+    "la-estancia": {
+      about: "這座舊莊園坐落在繁忙的市區大道旁，現為藝術與文化活動場地。",
+      observe: "從大道轉入花園後，留意歷史宅邸的尺度，並從步道觀察立面與植栽的關係。",
+      walk: ["從阿爾塔米拉站往弗朗西斯科・德・米蘭達大道出站。", "循標示找到藝術中心入口，查看當日活動與開放展廳。", "走開放的花園步道，離開後可往法國廣場方向折返。"],
+      photo: "從開放步道將宅邸和花園植栽一起取景。進入展廳前先詢問作品能否拍攝。",
+      faq: ["能在同一天參觀花園和展覽嗎？", "請核對到訪當天開放的戶外區及展廳，展覽依館方檔期調整。"],
+    },
     "plaza-francia": {
       about: "查考市政府曾整修這座廣場。這裡銜接阿爾塔米拉地鐵站和社區的公共空間。",
       observe: "留意方尖碑的垂直線條與廣場橫向空間的對比，繞到另一側比較碑身輪廓。",

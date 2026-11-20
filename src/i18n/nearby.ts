@@ -1,6 +1,17 @@
-export const nearbyTopics = ["planetario-humboldt", "museo-del-transporte", "plaza-francia"] as const;
+export const nearbyTopics = ["planetario-humboldt", "museo-del-transporte", "plaza-francia", "la-estancia"] as const;
 
 export const nearbyPlaces = {
+  "la-estancia": {
+    map: "https://www.google.com/maps/search/?api=1&query=PDVSA+Centro+de+Arte+La+Estancia%2C+Altamira%2C+Chacao%2C+Caracas",
+    address: "Avenida Francisco de Miranda, Altamira, Chacao, Caracas, Miranda",
+    photo: "/nearby/la-estancia.jpg",
+    width: 330,
+    height: 248,
+    author: "Ramyz18",
+    credit: "https://commons.wikimedia.org/wiki/File:La_Estancia._Caracas.jpg",
+    source: "https://enchacao.com/la-estancia/",
+    operatorSource: "https://es.wikipedia.org/wiki/Centro_de_Arte_La_Estancia",
+  },
   "plaza-francia": {
     map: "https://www.google.com/maps/search/?api=1&query=Plaza+Francia+de+Altamira%2C+Chacao%2C+Caracas",
     address: "Avenida Francisco de Miranda, Altamira, Chacao, Caracas, Miranda",
@@ -51,6 +62,16 @@ export const parkDetails = {
 
 export const nearbyCopy = {
   es: {
+    "la-estancia": {
+      title: "Centro de Arte La Estancia",
+      description: "Una antigua hacienda cafetalera convertida en centro cultural en Altamira.",
+      manager: "PDVSA Centro de Arte La Estancia.",
+      basics: "Sede cultural de Caracas. Consulta con el centro los horarios, el acceso y las condiciones de cada exposición o actividad.",
+      transit: "En la Línea 1, baja en Altamira y sigue la avenida Francisco de Miranda hacia la entrada de La Estancia.",
+      history: "La sede ocupa una antigua hacienda restaurada. Su transformación en centro de arte preservó el conjunto histórico y abrió un espacio para exposiciones y actividades culturales.",
+      plan: "Reserva tiempo para recorrer los jardines y pregunta al llegar qué salas están abiertas. Puedes combinar la visita con Plaza Francia.",
+      photo: "Edificio y jardines del Centro de Arte La Estancia",
+    },
     "plaza-francia": {
       title: "Plaza Francia de Altamira",
       description: "El obelisco de Chacao sobre la estación Altamira del metro de Caracas.",
@@ -83,6 +104,16 @@ export const nearbyCopy = {
     },
   },
   en: {
+    "la-estancia": {
+      title: "La Estancia Art Center",
+      description: "An old coffee estate turned cultural centre in Altamira.",
+      manager: "PDVSA Centro de Arte La Estancia.",
+      basics: "Caracas cultural venue. Check current opening hours, entry and arrangements for individual exhibitions or events with the centre.",
+      transit: "Take Metro Line 1 to Altamira and follow Avenida Francisco de Miranda to the La Estancia entrance.",
+      history: "The Caracas venue occupies a restored estate. Its conversion into an art centre preserved the historic setting and gave it a new role as a venue for exhibitions and cultural events.",
+      plan: "Allow time for the gardens and ask which galleries are open when you arrive. The visit pairs well with Plaza Francia.",
+      photo: "Building and gardens at La Estancia Art Center",
+    },
     "plaza-francia": {
       title: "Plaza Francia in Altamira",
       description: "Chacao’s obelisk square above the Altamira metro station in Caracas.",
@@ -115,6 +146,16 @@ export const nearbyCopy = {
     },
   },
   zh: {
+    "la-estancia": {
+      title: "拉埃斯坦西亞藝術中心",
+      description: "從阿爾塔米拉的舊咖啡莊園，走進卡拉卡斯的展覽與文化場館。",
+      manager: "委內瑞拉國家石油公司旗下的拉埃斯坦西亞藝術中心。",
+      basics: "卡拉卡斯文化場館。開放時間、入場方式及個別展覽和活動安排請向中心查詢。",
+      transit: "搭地鐵 1 號線至阿爾塔米拉站，沿弗朗西斯科・德・米蘭達大道步行至藝術中心入口。",
+      history: "卡拉卡斯館舍前身是咖啡莊園，修復後轉作藝術中心，保留歷史場域並用於展覽及文化活動。",
+      plan: "入場後先問哪些展廳開放，另留時間走花園，可與法國廣場串成同一段行程。",
+      photo: "拉埃斯坦西亞藝術中心建築與花園",
+    },
     "plaza-francia": {
       title: "阿爾塔米拉法國廣場",
       description: "在卡拉卡斯阿爾塔米拉地鐵站上方，透過方尖碑認識查考市的公共廣場。",
