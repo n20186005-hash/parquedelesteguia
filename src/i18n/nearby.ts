@@ -1,6 +1,18 @@
-export const nearbyTopics = ["planetario-humboldt", "museo-del-transporte", "plaza-francia", "la-estancia", "lago-9-leander", "patios-ornamentales", "jardin-xerofitico", "concha-acustica", "aviario", "terrario"] as const;
+export const nearbyTopics = ["planetario-humboldt", "museo-del-transporte", "plaza-francia", "la-estancia", "lago-9-leander", "patios-ornamentales", "jardin-xerofitico", "concha-acustica", "aviario", "terrario", "parque-simon-bolivar"] as const;
 
 export const nearbyPlaces = {
+  "parque-simon-bolivar": {
+    map: "https://www.google.com/maps/search/?api=1&query=Parque+Sim%C3%B3n+Bol%C3%ADvar%2C+La+Carlota%2C+Caracas",
+    address: "Sector La Carlota, parroquia Leoncio Martínez, municipio Sucre, Miranda, Venezuela",
+    photo: "/nearby/parque-simon-bolivar.jpg",
+    width: 330,
+    height: 247,
+    author: "Wilnel José Verdú Guerrero",
+    credit: "https://commons.wikimedia.org/wiki/File:Lago-Libertad-del-Parque-Sim%C3%B3n-Bol%C3%ADvar-(Caracas).jpg",
+    source: "https://es.wikipedia.org/wiki/Parque_Bol%C3%ADvar_(Caracas)",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+  },
   "terrario": {
     map: "https://www.google.com/maps/search/?api=1&query=Terrario%2C+Parque+del+Este%2C+Caracas",
     address: "Parque Generalísimo Francisco de Miranda, avenida Francisco de Miranda, Caracas 1071, Miranda",
@@ -138,6 +150,16 @@ export const parkDetails = {
 
 export const nearbyCopy = {
   es: {
+    "parque-simon-bolivar": {
+      title: "Parque Simón Bolívar de La Carlota",
+      description: "Paseos junto al Lago Libertad en parte del antiguo aeródromo de La Carlota.",
+      manager: "Instituto Nacional de Parques (INPARQUES).",
+      basics: "Parque público en el municipio Sucre. Comprueba los horarios y las puertas habilitadas antes de salir.",
+      transit: "Toma la Línea 1 hasta Miranda. Desde el Parque del Este, consulta si está habilitado el paso por el Puente Independencia.",
+      history: "El parque abrió en 2018 en terrenos del antiguo aeropuerto. El Puente Independencia enlaza ambos parques sobre la autopista.",
+      plan: "Dedica una parada al Lago Libertad y regresa por el mismo acceso si el puente está abierto.",
+      photo: "Lago Libertad, Parque Simón Bolívar de La Carlota",
+    },
     "terrario": {
       title: "Terrario",
       description: "Un espacio dedicado a reptiles y a la fauna venezolana.",
@@ -240,6 +262,16 @@ export const nearbyCopy = {
     },
   },
   en: {
+    "parque-simon-bolivar": {
+      title: "Simón Bolívar Park at La Carlota",
+      description: "Walks around Lake Libertad on part of the former La Carlota airfield.",
+      manager: "National Parks Institute (INPARQUES).",
+      basics: "Public park in Sucre municipality. Check hours and available entrances before setting out.",
+      transit: "Take Metro Line 1 to Miranda. From East Park, check whether the Independencia pedestrian bridge is open.",
+      history: "The park opened in 2018 on former airport grounds. The Independencia Bridge links the two parks over the highway.",
+      plan: "Allow time for Lake Libertad and return by the same entrance if the bridge is open.",
+      photo: "Lake Libertad in Simón Bolívar Park at La Carlota",
+    },
     "terrario": {
       title: "Terrarium",
       description: "An exhibit space for reptiles and Venezuelan wildlife.",
@@ -342,6 +374,16 @@ export const nearbyCopy = {
     },
   },
   zh: {
+    "parque-simon-bolivar": {
+      title: "拉卡洛塔西蒙・玻利瓦爾公園",
+      description: "在拉卡洛塔舊機場的一部分土地上，沿自由湖步道散步。",
+      manager: "委內瑞拉國家公園管理局（INPARQUES）。",
+      basics: "蘇克雷市的公共公園。出發前請確認開放時間及可通行入口。",
+      transit: "搭地鐵 1 號線至米蘭達站，由東方公園確認獨立橋當天是否開放通行。",
+      history: "公園在 2018 年於舊機場用地開放。獨立橋越過高速公路，連接兩座公園。",
+      plan: "留時間走自由湖畔，獨立橋開放時可由同一入口折返。",
+      photo: "拉卡洛塔西蒙・玻利瓦爾公園的自由湖",
+    },
     "terrario": {
       title: "爬蟲館",
       description: "認識爬行動物及委內瑞拉野生動物的場館。",

@@ -6,6 +6,13 @@ export const nearbyDetailLabels = {
 
 export const nearbyDetails = {
   es: {
+    "parque-simon-bolivar": {
+      about: "El parque reutiliza parte de La Carlota como espacio recreativo. El lago artificial y sus caminos son referencias para orientarse.",
+      observe: "Desde la ribera mira cómo la horizontal del lago enmarca la silueta de El Ávila.",
+      walk: ["Verifica el acceso desde el Parque del Este antes de dirigirte al puente.", "Cruza solo si el paso peatonal está habilitado y sigue las señales hacia Lago Libertad.", "Regresa por el acceso abierto que hayas utilizado."],
+      photo: "Desde el paseo ribereño, compón una vista del agua con El Ávila al fondo.",
+      faq: ["¿Es el mismo parque que el Parque del Este?", "Son dos parques, comunicados por el Puente Independencia. Verifica el paso antes de organizar la visita a ambos."],
+    },
     "terrario": {
       about: "Un espacio dedicado a reptiles y a la fauna venezolana.",
       observe: "La vista exterior permite mostrar cómo el edificio se integra con la vegetación. Evita el flash en los recintos.",
@@ -78,6 +85,13 @@ export const nearbyDetails = {
     },
   },
   en: {
+    "parque-simon-bolivar": {
+      about: "The park turns part of La Carlota into public recreation space. Its artificial lake and shore paths help visitors get oriented.",
+      observe: "From the shore, look at how the horizontal line of the lake frames the silhouette of El Ávila.",
+      walk: ["Check the East Park connection before heading to the bridge.", "Cross only when the pedestrian passage is open and follow signs to Lake Libertad.", "Return through the open entrance you used."],
+      photo: "Frame the water with El Ávila in the background from the lakeside walk.",
+      faq: ["Is this East Park?", "They are two parks linked by the Independencia Bridge. Check that the crossing is open when planning to visit both."],
+    },
     "terrario": {
       about: "An exhibit space for reptiles and Venezuelan wildlife.",
       observe: "The exterior shows how the building sits among the plants. Avoid flash around enclosures.",
@@ -150,6 +164,13 @@ export const nearbyDetails = {
     },
   },
   zh: {
+    "parque-simon-bolivar": {
+      about: "公園將拉卡洛塔部分舊機場用地轉作公共遊憩空間。人工湖及環湖步道是辨認方向的地標。",
+      observe: "從湖畔觀察水面橫向線條如何襯托阿維拉山的輪廓。",
+      walk: ["從東方公園出發前，先確認通往獨立橋的步道是否開放。", "行人通道開放時過橋，循標示前往自由湖。", "從來時使用的開放入口折返。"],
+      photo: "在湖畔步道將自由湖與遠處阿維拉山一同取景。",
+      faq: ["這裡就是東方公園嗎？", "兩座公園由獨立橋相連。計畫同日遊覽時，請先查詢橋面通行狀態。"],
+    },
     "terrario": {
       about: "認識爬行動物及委內瑞拉野生動物的場館。",
       observe: "可從外側拍攝建築與植栽的關係；展示區周圍請關閉閃光燈。",
