@@ -4,6 +4,10 @@ import React, { useEffect, useState, useRef } from "react";
 import { LangProvider, useLang } from "@/components/LangProvider";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
+import { guides, guideLabels, guideTopics } from "@/i18n/visit-guides";
+
+import { nearbyCopy, nearbyLabels, nearbyTopics } from "@/i18n/nearby";
+
 const MAPS_URL = "https://maps.app.goo.gl/QLrWN8gLZQ4CJkU5A";
 
 const GALLERY_IMAGES = Array.from({ length: 19 }, (_: number, i: number) => `/gallery/east-park (${i + 1}).jpg`);
@@ -24,7 +28,7 @@ function ScrollReveal({ children, className = "" }: { children: React.ReactNode;
 }
 
 function Nav() {
-  const { t } = useLang();
+  const { t, locale } = useLang();
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
@@ -43,6 +47,7 @@ function Nav() {
           <a href="#about">{t.nav.about}</a>
           <a href="#visiting">{t.nav.visiting}</a>
           <a href="#transportation">{t.nav.transportation}</a>
+          <a href="#visit-guides">{(guideLabels[locale] ?? guideLabels.es).guides}</a>
           <a href="#history">{t.nav.history}</a>
           <a href="#tips">{t.nav.tips}</a>
           <a href="#reviews">{t.nav.reviews}</a>
@@ -56,7 +61,7 @@ function Nav() {
 }
 
 function Hero() {
-  const { t } = useLang();
+  const { t, locale } = useLang();
   return (
     <section className="hero">
       <div className="hero-bg" />
@@ -72,11 +77,16 @@ function Hero() {
             <path d="M7 17L17 7M17 7H7M17 7V17" />
           </svg>
         </a>
+        <p style={{ marginTop: "1rem" }}>
+          <a href="#nearby-attractions" style={{ color: "#fff", textDecoration: "underline", textUnderlineOffset: "0.25em" }}>
+            {(nearbyLabels[locale] ?? nearbyLabels.es).nearby}
+          </a>
+        </p>
       </div>
       <div className="hero-meta">
         <div className="hero-rating">4.3</div>
         <div className="hero-stars">★★★★☆</div>
-        <div className="hero-reviews">15,964 {t.rating.reviews} · {t.rating.source}</div>
+        <div className="hero-reviews">16,422 {t.rating.reviews} · {t.rating.source}</div>
       </div>
     </section>
   );
@@ -123,7 +133,7 @@ function About() {
 }
 
 function Visiting() {
-  const { t } = useLang();
+  const { t, locale } = useLang();
   const cards = [
     { title: t.visiting.hours.title, content: t.visiting.hours.content, note: t.visiting.hours.note },
     { title: t.visiting.price.title, content: t.visiting.price.content, note: t.visiting.price.note },
@@ -143,6 +153,7 @@ function Visiting() {
             {cards.map((c, i) => (
               <div className="info-card" key={i}>
                 <div className="info-card-title">{c.title}</div>
+                {i === 0 && <a href={`/${locale}/guide/horarios`}>{guides[locale]?.horarios.title ?? guides.es.horarios.title}</a>}
                 <div className="info-card-content" style={{ whiteSpace: "pre-line" }}>{c.content}</div>
                 <div className="info-card-note">{c.note}</div>
               </div>
@@ -459,6 +470,44 @@ function FAQ() {
   );
 }
 
+function VisitGuides() {
+  const { locale } = useLang();
+  const language = guides[locale] ? locale : "es";
+  return (
+    <section id="visit-guides" className="section">
+      <h2 className="section-title">{guideLabels[language].guides}</h2>
+      <div className="section-divider" />
+      <div className="info-grid">
+        {guideTopics.map((topic) => (
+          <a className="info-card" key={topic} href={`/${language}/guide/${topic}`}>
+            <h3 className="info-card-title">{guides[language][topic].title}</h3>
+            <p className="info-card-note">{guides[language][topic].description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function NearbyAttractions() {
+  const { locale } = useLang();
+  const language = nearbyCopy[locale] ? locale : "es";
+  return (
+    <section id="nearby-attractions" className="section">
+      <h2 className="section-title">{nearbyLabels[language].nearby}</h2>
+      <div className="section-divider" />
+      <div className="info-grid">
+        {nearbyTopics.map((place) => (
+          <a className="info-card" key={place} href={`/${language}/nearby/${place}`}>
+            <h3 className="info-card-title">{nearbyCopy[language][place].title}</h3>
+            <p className="info-card-note">{nearbyCopy[language][place].description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Footer() {
   const { t, locale } = useLang();
   return (
@@ -499,12 +548,14 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <About />
       <Visiting />
       <Transportation />
+      <VisitGuides />
       <History />
       <Tips />
       <Gallery />
       <Reviews />
       <FAQ />
       <Location />
+      <NearbyAttractions />
       <Footer />
     </LangProvider>
   );

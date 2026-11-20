@@ -1,12 +1,16 @@
 import type { MetadataRoute } from 'next';
 
+import { guideLanguages, guideTopics } from "@/i18n/visit-guides";
+
+import { nearbyTopics } from "@/i18n/nearby";
+
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = `https://${process.env.CURRENT_SITE_DOMAIN || "parquedelesteguia.com"}`;
+  const baseUrl = `https://${process.env.CURRENT_SITE_DOMAIN || "www.parquedelesteguia.com"}`;
 
-  const languages = ['en', 'es', 'zh'];
-  const routes = ['', '/privacy', '/terms', '/cookies'];
+  const languages = guideLanguages;
+  const routes = ['', '/privacy', '/terms', '/cookies', ...guideTopics.map((topic) => `/guide/${topic}`), ...nearbyTopics.map((place) => `/nearby/${place}`)];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
@@ -27,14 +31,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
   }
-
-  // Add the root route
-  sitemapEntries.push({
-    url: `${baseUrl}/`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly',
-    priority: 0.5,
-  });
 
   return sitemapEntries;
 }

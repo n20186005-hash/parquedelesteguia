@@ -1,34 +1,33 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "../globals.css";
 
-const cormorant = Cormorant_Garamond({
-  weight: ["400", "600", "700"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-});
-
-const dmSans = DM_Sans({
-  weight: ["300", "400", "500", "600"],
-  subsets: ["latin"],
-  variable: "--font-body",
-  display: "swap",
-});
+const homepageSearch = {
+  es: {
+    title: "Parque del Este, Caracas | Horario, metro y mapa",
+    description: "Planifica tu visita al Parque del Este de Caracas. Consulta cómo confirmar el horario, llegar por la estación Miranda y recorrer el planetario, los jardines y el Lago 9.",
+  },
+  en: {
+    title: "East Park, Caracas | Hours, metro and visitor map",
+    description: "Plan a visit to East Park in Caracas. Check opening information, find the Miranda metro entrance and follow a walk through the gardens to Lake 9.",
+  },
+  zh: {
+    title: "卡拉卡斯東方公園｜開放時間、地鐵與園內地圖",
+    description: "規劃卡拉卡斯東方公園行程，查詢開放資訊、米蘭達地鐵站與入口，以及洪堡天文館、景觀庭院和第九湖的步行路線。",
+  },
+};
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const baseUrl = `https://${process.env.CURRENT_SITE_DOMAIN || "parquedelesteguia.com"}`;
+  const baseUrl = `https://${process.env.CURRENT_SITE_DOMAIN || "www.parquedelesteguia.com"}`;
   const lang = (await params).lang;
+  const { title, description } = lang === "es" ? homepageSearch.es : lang === "zh" ? homepageSearch.zh : homepageSearch.en;
   
   return {
     metadataBase: new URL(baseUrl),
     title: {
-      default: "East Park — Caracas, Venezuela",
+      default: title,
       template: "%s | East Park",
     },
-    description:
-      "A travel guide to East Park (Parque del Este / Parque Generalísimo Francisco de Miranda), the important urban park in Caracas, Venezuela, featuring green spaces, walking trails, and cultural facilities.",
+    description,
     keywords: [
       "East Park",
       "Parque del Este",
@@ -51,9 +50,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       type: "website",
       locale: lang === "es" ? "es_VE" : lang === "zh" ? "zh_CN" : "en_US",
       url: `${baseUrl}/${lang}`,
-      title: "East Park — Caracas, Venezuela",
-      description:
-        "A travel guide to East Park (Parque del Este), the important urban park in Caracas, Venezuela.",
+      title,
+      description,
       siteName: "East Park Travel Guide",
       images: [
         {
@@ -66,9 +64,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     },
     twitter: {
       card: "summary_large_image",
-      title: "East Park — Caracas, Venezuela",
-      description:
-        "A travel guide to East Park (Parque del Este), the important urban park in Caracas, Venezuela.",
+      title,
+      description,
       images: ["/gallery/east-park (1).jpg"],
     },
     robots: {
@@ -112,7 +109,7 @@ export default async function RootLayout({
 }>) {
   const resolvedParams = await params;
   return (
-    <html lang={resolvedParams.lang} className={`${cormorant.variable} ${dmSans.variable}`}>
+    <html lang={resolvedParams.lang}>
       <body>{children}</body>
     </html>
   );

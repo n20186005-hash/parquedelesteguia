@@ -46,7 +46,7 @@ export const translations = {
       title: "游览指南",
       hours: {
         title: "⏱️ 开放时间",
-        content: "周五至周六：07:00 - 16:00\n周一至周四：07:00 - 13:00\n周日：闭园 (Closed)",
+        content: "2026 年 7 月復園公告：週二至週日 05:30–19:30，週一維護。出發前請向 INPARQUES 核對。",
         note: "注：开放时间可能因节假日或设备维护有所调整",
       },
       price: {
@@ -134,7 +134,7 @@ export const translations = {
       items: [
         {
           question: "公园的开放时间是什么？",
-          answer: "周五至周六：07:00 - 16:00\n周一至周四：07:00 - 13:00\n周日：闭园 (Closed)\n请注意，开放时间可能因节假日或设备维护有所调整。"
+          answer: "2026 年 7 月復園公告：週二至週日 05:30–19:30，週一維護。出發前請向 INPARQUES 核對。"
         },
         {
           question: "公园是否免费开放？",
@@ -153,8 +153,8 @@ export const translations = {
           answer: "非常适合！这是加拉加斯最受家庭欢迎的目的地之一。开阔的草坪、莱安德号海盗船外观和众多小动物非常受孩子们喜爱。公园内有安保人员巡逻，但仍需在人群密集处照看好儿童和随身物品。"
         },
         {
-          question: "为什么周日不开门？",
-          answer: "根据目前的管理规定，公园在周日进行休整和维护（Closed）。请务必将您的行程安排在周一至周六。"
+          question: "星期一可以入園嗎？",
+          answer: "2026 年 7 月復園公告將星期一列為維護日。出發前請向 INPARQUES 確認到訪當天的安排。"
         },
       ],
     },
@@ -217,7 +217,7 @@ export const translations = {
       title: "Visitor Information",
       hours: {
         title: "Opening Hours",
-        content: "Thu-Sat 7:00 - 16:00\nMon-Wed 7:00 - 13:00\nSunday: Closed",
+        content: "July 2026 reopening schedule: Tuesday–Sunday, 5:30 AM–7:30 PM; Monday maintenance. Confirm with INPARQUES before visiting.",
         note: "Morning visits recommended when it's cooler",
       },
       price: {
@@ -298,7 +298,7 @@ export const translations = {
       items: [
         {
           question: "What are the opening hours of East Park?",
-          answer: "The park's opening hours are as follows:\n\nThursday to Saturday: 7:00 AM to 4:00 PM\nMonday to Wednesday: 7:00 AM to 1:00 PM\nSunday: Closed\n\nPlease note that opening hours may be adjusted due to holidays or special events. It is recommended to confirm in advance."
+          answer: "The July 2026 reopening schedule was Tuesday–Sunday, 5:30 AM–7:30 PM, with Monday maintenance. Check with INPARQUES for your date and last admission."
         },
         {
           question: "Is the park free to visit?",
@@ -381,7 +381,7 @@ export const translations = {
       title: "Información para Visitas",
       hours: {
         title: "Horario",
-        content: "Jue-Sáb 7:00 - 16:00\nLun-Mié 7:00 - 13:00\nDomingo: Cerrado",
+        content: "Horario anunciado en julio de 2026: martes a domingo, 5:30–19:30; lunes de mantenimiento. Confirma con INPARQUES antes de salir.",
         note: "Se recomiendan las visitas por la mañana cuando hace más fresco",
       },
       price: {
@@ -462,7 +462,7 @@ export const translations = {
       items: [
         {
           question: "¿Cuál es el horario de apertura del Parque del Este?",
-          answer: "El horario de apertura del parque es el siguiente:\n\nJueves a sábado: 7:00 AM a 4:00 PM\nLunes a miércoles: 7:00 AM a 1:00 PM\nDomingo: Cerrado\n\nTenga en cuenta que el horario de apertura puede ajustarse debido a festivos o eventos especiales. Se recomienda confirmar con anticipación."
+          answer: "El horario anunciado al reabrir en julio de 2026 fue de martes a domingo, de 5:30 a 19:30, con mantenimiento los lunes. Consulta con INPARQUES tu fecha y la hora de último ingreso."
         },
         {
           question: "¿Es gratuito visitar el parque?",
