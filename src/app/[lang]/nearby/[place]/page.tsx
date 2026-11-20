@@ -1,3 +1,4 @@
+import PlanetariumVisit from "@/components/PlanetariumVisit";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -130,6 +131,7 @@ export default async function NearbyPlace({ params }: Props) {
         </section>
         <p className="about-text"><a href={data.source}>{labels.source}</a></p>
       </article>
+      {place === "planetario-humboldt" ? <PlanetariumVisit lang={lang} /> : (
       <aside className="info-card">
         <h2 className="info-card-title">{labels.nearby}</h2>
         <ul>
@@ -138,6 +140,7 @@ export default async function NearbyPlace({ params }: Props) {
         ))}
         </ul>
       </aside>
+      )}
     </main>
   );
 }
