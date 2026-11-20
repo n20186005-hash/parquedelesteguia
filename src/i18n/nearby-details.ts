@@ -6,6 +6,13 @@ export const nearbyDetailLabels = {
 
 export const nearbyDetails = {
   es: {
+    "iglesia-san-jose-chacao": {
+      about: "La parroquia organiza el culto y la atención parroquial. Su sitio oficial publica por separado los horarios del despacho y de los servicios religiosos.",
+      observe: "Desde la plaza, observa la fachada y el campanario; si se puede entrar, compara la nave central con las laterales.",
+      walk: ["Desde la estación Chacao, camina al casco histórico.", "Cruza la plaza hacia el templo en el lado norte.", "Regresa por la plaza o continúa por las calles del casco histórico."],
+      photo: "Desde el extremo sur de la plaza, toma la fachada de frente; desde un lateral, busca un encuadre con el campanario.",
+      faq: ["¿El horario del despacho es el del templo?", "La parroquia publica horarios distintos para el despacho y las misas. Consulta con ella el acceso para una visita."],
+    },
     "plaza-bolivar-chacao": {
       about: "La plaza recibe actos cívicos y actividades vecinales. La iglesia de San José ocupa el costado norte y ayuda a leer el trazado fundacional.",
       observe: "Compara el espacio abierto con la escala de las calles que llegan a sus bordes.",
@@ -99,6 +106,13 @@ export const nearbyDetails = {
     },
   },
   en: {
+    "iglesia-san-jose-chacao": {
+      about: "The parish oversees worship and parish services. Its official site lists parish office hours separately from Mass times.",
+      observe: "Observe the façade and bell tower from the square. If interior access is available, compare the central aisle with the side aisles.",
+      walk: ["Walk from Chacao station toward the historic centre.", "Cross the square to the church on its north side.", "Return through the square or explore the surrounding historic streets."],
+      photo: "From the south end of the square, frame the façade head-on. Move to one side for a view that includes the bell tower.",
+      faq: ["Do parish office hours apply to the church?", "The parish lists office hours and Mass times separately. Ask the parish about visitor access."],
+    },
     "plaza-bolivar-chacao": {
       about: "The square hosts civic and community events. San José Church anchors the north side of the historic layout.",
       observe: "Compare the open square with the scale of the streets that meet its edges.",
@@ -192,6 +206,13 @@ export const nearbyDetails = {
     },
   },
   zh: {
+    "iglesia-san-jose-chacao": {
+      about: "堂區負責禮拜及堂務服務。官網分別列出堂務辦公時間與彌撒時段。",
+      observe: "先在廣場辨認立面與鐘樓。若當天可入內，可比較中廊與兩側走道的配置。",
+      walk: ["從查考站步行往舊城區。", "穿過廣場，往北側教堂走。", "由廣場折返，或沿周圍街道續遊舊城。"],
+      photo: "從廣場南端正拍教堂，再走到一側斜拍鐘樓。",
+      faq: ["堂務辦公時間就是教堂開放時間嗎？", "堂區分開公布辦公及彌撒時間，參觀前可另外詢問何時可入內。"],
+    },
     "plaza-bolivar-chacao": {
       about: "廣場承辦市政儀式與社區活動。北側的聖何塞教堂是辨認舊城格局的地標。",
       observe: "從廣場中央走到邊緣，體會開放空間與周圍街道的尺度變化。",

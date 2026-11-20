@@ -1,6 +1,19 @@
-export const nearbyTopics = ["planetario-humboldt", "museo-del-transporte", "plaza-francia", "la-estancia", "lago-9-leander", "patios-ornamentales", "jardin-xerofitico", "concha-acustica", "aviario", "terrario", "parque-simon-bolivar", "fuente-las-cortinas", "plaza-bolivar-chacao"] as const;
+export const nearbyTopics = ["planetario-humboldt", "museo-del-transporte", "plaza-francia", "la-estancia", "lago-9-leander", "patios-ornamentales", "jardin-xerofitico", "concha-acustica", "aviario", "terrario", "parque-simon-bolivar", "fuente-las-cortinas", "plaza-bolivar-chacao", "iglesia-san-jose-chacao"] as const;
 
 export const nearbyPlaces = {
+  "iglesia-san-jose-chacao": {
+    map: "https://www.google.com/maps/search/?api=1&query=Iglesia+San+Jos%C3%A9+de+Chacao%2C+Avenida+Mohedano%2C+Chacao%2C+Caracas",
+    address: "Avenida Mohedano, Plaza Bolívar de Chacao, Caracas 1060, Miranda, Venezuela",
+    photo: "/nearby/iglesia-san-jose-chacao.jpg",
+    width: 330,
+    height: 247,
+    author: "Queniqueo",
+    credit: "https://commons.wikimedia.org/wiki/File:Frente_de_la_iglesia_San_Jos%C3%A9_de_Chacao.jpg",
+    source: "https://guiaccs.com/obras/iglesia-de-san-jose-y-plaza-bolivar-de-chacao/",
+    operatorSource: "https://sanjosedechacao.org/serviciosparroquiales/",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+  },
   "plaza-bolivar-chacao": {
     map: "https://www.google.com/maps/search/?api=1&query=Plaza+Bol%C3%ADvar+de+Chacao%2C+Avenida+Mohedano%2C+Chacao%2C+Caracas",
     address: "Avenida Mohedano, casco histórico de Chacao, Miranda, Venezuela",
@@ -174,6 +187,16 @@ export const parkDetails = {
 
 export const nearbyCopy = {
   es: {
+    "iglesia-san-jose-chacao": {
+      title: "Iglesia de San José de Chacao",
+      description: "Un templo de tres naves en el lado norte de la plaza Bolívar de Chacao.",
+      manager: "Parroquia San José de Chacao, Arquidiócesis de Caracas.",
+      basics: "Templo parroquial activo. Consulta el horario de misas y el acceso con la parroquia antes de ir.",
+      transit: "Desde el metro Chacao, cruza por los pasos peatonales y sigue hacia el casco histórico por la avenida Mohedano.",
+      history: "La construcción del templo se inició en 1769. Su posición al norte de la plaza conserva la relación entre el templo y el damero del pueblo fundacional.",
+      plan: "Si hay misa, recorre primero la plaza y deja la visita arquitectónica al interior para cuando el personal confirme el acceso.",
+      photo: "Fachada de la iglesia de San José de Chacao",
+    },
     "plaza-bolivar-chacao": {
       title: "Plaza Bolívar de Chacao",
       description: "La plaza del casco fundacional, frente a la iglesia de San José.",
@@ -306,6 +329,16 @@ export const nearbyCopy = {
     },
   },
   en: {
+    "iglesia-san-jose-chacao": {
+      title: "San José Church in Chacao",
+      description: "A three-aisled parish church on the north side of Bolívar Square in Chacao.",
+      manager: "San José de Chacao Parish, Archdiocese of Caracas.",
+      basics: "Active parish church. Check Mass times and visitor access with the parish before going.",
+      transit: "From Chacao metro, use marked crossings and head toward the historic centre and Avenida Mohedano.",
+      history: "Construction began in 1769. The church’s position on the north side of the square preserves its relationship with the grid of the original settlement.",
+      plan: "If Mass is in progress, walk around the square first and revisit the interior when access is available.",
+      photo: "Façade of San José Church in Chacao",
+    },
     "plaza-bolivar-chacao": {
       title: "Bolívar Square in Chacao",
       description: "The square at the heart of historic Chacao, facing San José Church.",
@@ -438,6 +471,16 @@ export const nearbyCopy = {
     },
   },
   zh: {
+    "iglesia-san-jose-chacao": {
+      title: "查考聖何塞教堂",
+      description: "在查考玻利瓦爾廣場北側，認識舊城的三廊式教堂。",
+      manager: "卡拉卡斯總教區查考聖何塞堂區。",
+      basics: "使用中的堂區教堂。出發前請向堂區確認彌撒時段及參觀安排。",
+      transit: "由查考地鐵站使用行人穿越道，往舊城區與莫埃達諾大道步行。",
+      history: "教堂於 1769 年開始興建。它位於廣場北側，可見早期聚落的街廓如何圍繞廣場與教堂安排。",
+      plan: "如遇彌撒，可先遊覽廣場，並等堂區確認開放後再入內觀察建築。",
+      photo: "查考聖何塞教堂正立面",
+    },
     "plaza-bolivar-chacao": {
       title: "查考玻利瓦爾廣場",
       description: "在聖何塞教堂前認識查考舊城的公共空間。",
