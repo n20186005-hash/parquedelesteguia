@@ -492,10 +492,16 @@ function VisitGuides() {
 function NearbyAttractions() {
   const { locale } = useLang();
   const language = nearbyCopy[locale] ? locale : "es";
+  const introduction = {
+    es: "Explora el Parque del Este y conecta tu visita con plazas, museos y paseos de Caracas. Cada guía incluye qué observar, cómo llegar y qué ver a continuación.",
+    en: "Explore East Park and continue to Caracas’s squares, museums and pedestrian walks. Each guide covers what to look for, how to arrive and where to go next.",
+    zh: "從東方公園的湖畔、庭院和天文館出發，延伸到卡拉卡斯的廣場、博物館與步行街。各專頁整理看點、交通和可接續的景點。",
+  };
   return (
     <section id="nearby-attractions" className="section">
       <h2 className="section-title">{nearbyLabels[language].nearby}</h2>
       <div className="section-divider" />
+      <p className="about-text">{introduction[language]}</p>
       <div className="info-grid">
         {nearbyTopics.map((place) => (
           <a className="info-card" key={place} href={`/${language}/nearby/${place}`}>

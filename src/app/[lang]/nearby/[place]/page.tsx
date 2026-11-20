@@ -1,3 +1,6 @@
+import { nearbyPhotos } from "@/i18n/nearby-photos";
+import { nearbyFaq } from "@/i18n/nearby-faq";
+import { nearbyContext, visitorAccess } from "@/i18n/nearby-context";
 import styles from "@/components/PlanetariumVisit.module.css";
 import { nearbyPlanning } from "@/i18n/nearby-planning";
 import PlanetariumVisit from "@/components/PlanetariumVisit";
@@ -14,9 +17,9 @@ type Place = (typeof nearbyTopics)[number];
 type Props = { params: Promise<{ lang: string; place: string }> };
 
 const visitLabels = {
-  es: { advice: "Cómo organizar la visita", looking: "Qué observar", map: "Dirección y mapa", directory: "Ver todos los lugares cercanos", onward: "Continúa el recorrido", address: "Dirección", maps: "Abrir en Google Maps", photo: "Punto de observación" },
-  en: { advice: "Planning your visit", looking: "What to look for", map: "Address and map", directory: "See all nearby attractions", onward: "Continue your visit", address: "Address", maps: "Open in Google Maps", photo: "Where to stand" },
-  zh: { advice: "安排遊覽", looking: "現場觀察重點", map: "地址與地圖", directory: "查看所有周邊景點", onward: "下一站怎麼安排", address: "地址", maps: "在 Google 地圖開啟", photo: "觀察與拍攝位置" },
+  es: { advice: "Cómo organizar la visita", looking: "Qué observar", map: "Dirección y mapa", directory: "Ver todos los lugares cercanos", onward: "Continúa el recorrido", address: "Dirección", maps: "Abrir en Google Maps", photo: "Punto de observación", background: "Historia y diseño", walkFrom: "Ruta a pie desde el metro", metro: "Estación de referencia", overview: "En esta página", notes: "Fuente de la historia y el diseño" },
+  en: { advice: "Planning your visit", looking: "What to look for", map: "Address and map", directory: "See all nearby attractions", onward: "Continue your visit", address: "Address", maps: "Open in Google Maps", photo: "Where to stand", background: "History and design", walkFrom: "Walking directions from the metro", metro: "Suggested metro station", overview: "On this page", notes: "Source for history and design" },
+  zh: { advice: "安排遊覽", looking: "現場觀察重點", map: "地址與地圖", directory: "查看所有周邊景點", onward: "下一站怎麼安排", address: "地址", maps: "在 Google 地圖開啟", photo: "觀察與拍攝位置", background: "歷史背景與設計", walkFrom: "從地鐵站步行導航", metro: "可用地鐵站", overview: "本頁導覽", notes: "歷史與設計資料來源" },
 };
 
 async function readPlace(params: Props["params"]) {
@@ -33,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang, place } = await readPlace(params);
   const { title, description } = nearbyCopy[lang][place];
   const url = `/${lang}/nearby/${place}`;
-  const images = [nearbyPlaces[place].photo];
+  const images = [nearbyPhotos[place]?.src ?? nearbyPlaces[place].photo];
   return {
     title, description,
     alternates: {
@@ -58,6 +61,20 @@ export default async function NearbyPlace({ params }: Props) {
   const visit = visitLabels[lang];
   const planning = place === "planetario-humboldt" ? null : nearbyPlanning[place];
   const languageIndex = lang === "es" ? 0 : lang === "en" ? 1 : 2;
+  const context = nearbyContext[place];
+  const additionalPhoto = nearbyPhotos[place];
+  const [faqQuestion, faqAnswer] = nearbyFaq[place][languageIndex];
+  const [accessTitle, accessBody] = visitorAccess[context.access][languageIndex];
+  const managementSource = "operatorSource" in data ? data.operatorSource : data.source;
+  const management = "management" in context ? context.management : null;
+  const historySource = "source" in context ? context.source : data.source;
+  const destination = new URL(data.map).searchParams.get("query") ?? data.address;
+  const directions = `https://www.google.com/maps/dir/?${new URLSearchParams({
+    api: "1",
+    origin: `Estación de Metro ${context.station}, Caracas, Venezuela`,
+    destination,
+    travelmode: "walking",
+  })}`;
   const distinctObservation = extra.observe !== copy.description && extra.observe !== extra.photo;
   const distinctVisitTip = copy.plan !== extra.faq[1];
   const genericReturn = {
@@ -85,19 +102,40 @@ export default async function NearbyPlace({ params }: Props) {
           <p className="about-text">{copy.description}</p>
           <a className="maps-link" href={data.map}>{data.address}</a>
         </header>
-        <section className="info-card">
-          <h2 className="info-card-title">{detailLabels.about}{lang === "zh" ? "" : " "}{copy.title}</h2>
+        <section className={`info-card ${styles.management}`} aria-labelledby="visit-management">
+          <h2 className="info-card-title" id="visit-management">{detailLabels.about}{lang === "zh" ? "" : " "}{copy.title}</h2>
           <p><strong>{labels.management}</strong> · {copy.manager}</p>
+          {management && <p>{management.note[languageIndex]}</p>}
           <p>{extra.about}</p>
-          <a href={"operatorSource" in data ? data.operatorSource : data.source}>{labels.source}</a>
+          <a href={management?.source ?? managementSource}>{labels.source}</a>
         </section>
-        <figure style={{ marginBlock: "2rem" }}>
+        <nav className={styles.jumps} aria-label={visit.overview}>
+          <a href="#visit-history">{visit.background}</a>
+          <a href="#visiting-access">{accessTitle}</a>
+          <a href="#walking-route">{detailLabels.walk}</a>
+          <a href="#photo-spots">{detailLabels.photo}</a>
+          <a href="#visit-faq">{detailLabels.faq}</a>
+          <a href={planning ? "#visit-map" : "#planetarium-location"}>{visit.map}</a>
+        </nav>
+        <div className={styles.gallery}>
+        <figure>
           <Image src={data.photo} alt={copy.photo} width={data.width} height={data.height} unoptimized style={{ maxWidth: "100%", width: "auto", height: "auto", maxHeight: "28rem" }} />
           <figcaption className="info-card-note">{copy.photo} · <a href={data.credit}>{"author" in data ? data.author : "Veronidae"} / Wikimedia Commons</a> · <a href={"licenseUrl" in data ? data.licenseUrl : "https://creativecommons.org/licenses/by-sa/3.0/"}>{"license" in data ? data.license : "CC BY-SA 3.0"}</a></figcaption>
         </figure>
-        <section>
-          <h2 className="info-card-title">{detailLabels.history}</h2>
+        {additionalPhoto && (
+          <figure>
+            <Image src={additionalPhoto.src} alt={additionalPhoto.alt[languageIndex]} width={additionalPhoto.width} height={additionalPhoto.height} unoptimized />
+            <figcaption className="info-card-note">
+              {additionalPhoto.alt[languageIndex]} · <a href={additionalPhoto.source}>{labels.source}</a>
+            </figcaption>
+          </figure>
+        )}
+        </div>
+        <section className={`info-card ${styles.history}`} aria-labelledby="visit-history">
+          <h2 className="info-card-title" id="visit-history">{visit.background}</h2>
           <p className="about-text">{copy.history}</p>
+          <p>{context.context[languageIndex]}</p>
+          <a href={historySource}>{visit.notes}</a>
           {!planning && distinctObservation && <p className="about-text">{extra.observe}</p>}
         </section>
         {distinctVisitTip && (
@@ -120,6 +158,8 @@ export default async function NearbyPlace({ params }: Props) {
           <section className="info-card">
             <h2 className="info-card-title">{labels.transport}</h2>
             <p>{copy.transit}</p>
+            <p><strong>{visit.metro}</strong> · {context.station}</p>
+            <p><a href={directions}>{visit.walkFrom}</a></p>
             <a href={data.map}>{data.address}</a>
             <p><Link href={`/${lang}/guide/como-llegar`}>{labels.park}</Link></p>
           </section>
@@ -133,6 +173,11 @@ export default async function NearbyPlace({ params }: Props) {
           </section>
         </div>
         <div className={styles.visit}>
+          <section className={`info-card ${styles.access}`} aria-labelledby="visiting-access">
+            <h2 className="info-card-title" id="visiting-access">{accessTitle}</h2>
+            <p>{accessBody}</p>
+            <a href={managementSource}>{labels.source}</a>
+          </section>
           {planning && (
             <section aria-labelledby="visit-planning">
               <h2 className="section-title" id="visit-planning">{visit.advice}</h2>
@@ -154,7 +199,10 @@ export default async function NearbyPlace({ params }: Props) {
             <ol className={styles.steps}>
               {walk.map((step) => <li key={step}>{step}</li>)}
             </ol>
-            <a href={data.map}>{visit.maps}</a>
+            <div className={styles.actions}>
+              <a href={directions}>{visit.walkFrom}</a>
+              <a href={data.map}>{visit.maps}</a>
+            </div>
           </section>
           <section aria-labelledby="photo-spots">
             <h2 className="section-title" id="photo-spots">{detailLabels.photo}</h2>
@@ -171,6 +219,10 @@ export default async function NearbyPlace({ params }: Props) {
               <details className="info-card">
                 <summary>{extra.faq[0]}</summary>
                 <p>{extra.faq[1]}</p>
+              </details>
+              <details className="info-card">
+                <summary>{faqQuestion}</summary>
+                <p>{faqAnswer}</p>
               </details>
             </div>
           </section>

@@ -126,3 +126,58 @@
   outline: 2px solid white;
   outline-offset: 0.2rem;
 }
+
+.management p + p,
+.history p + p {
+  margin-top: 0.65rem;
+}
+
+.management a,
+.history a,
+.access a {
+  display: inline-block;
+  margin-top: 0.65rem;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.jumps {
+  display: flex;
+  gap: 0.5rem 1rem;
+  flex-wrap: wrap;
+  padding-block: 1rem 0.25rem;
+}
+
+.jumps a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.history {
+  margin-block: 2rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 1.25rem;
+  align-items: start;
+  margin-block: 2rem;
+}
+
+.gallery figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.gallery img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  max-height: 28rem;
+  width: auto;
+}
+
+.gallery figcaption {
+  margin-top: 0.45rem;
+}
