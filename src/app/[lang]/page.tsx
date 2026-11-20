@@ -4,6 +4,8 @@ import React, { useEffect, useState, useRef } from "react";
 import { LangProvider, useLang } from "@/components/LangProvider";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
+import { guides, guideLabels, guideTopics } from "@/i18n/visit-guides";
+
 const MAPS_URL = "https://maps.app.goo.gl/QLrWN8gLZQ4CJkU5A";
 
 const GALLERY_IMAGES = Array.from({ length: 19 }, (_: number, i: number) => `/gallery/east-park (${i + 1}).jpg`);
@@ -24,7 +26,7 @@ function ScrollReveal({ children, className = "" }: { children: React.ReactNode;
 }
 
 function Nav() {
-  const { t } = useLang();
+  const { t, locale } = useLang();
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
@@ -43,6 +45,7 @@ function Nav() {
           <a href="#about">{t.nav.about}</a>
           <a href="#visiting">{t.nav.visiting}</a>
           <a href="#transportation">{t.nav.transportation}</a>
+          <a href="#visit-guides">{(guideLabels[locale] ?? guideLabels.es).guides}</a>
           <a href="#history">{t.nav.history}</a>
           <a href="#tips">{t.nav.tips}</a>
           <a href="#reviews">{t.nav.reviews}</a>
@@ -459,6 +462,25 @@ function FAQ() {
   );
 }
 
+function VisitGuides() {
+  const { locale } = useLang();
+  const language = guides[locale] ? locale : "es";
+  return (
+    <section id="visit-guides" className="section">
+      <h2 className="section-title">{guideLabels[language].guides}</h2>
+      <div className="section-divider" />
+      <div className="info-grid">
+        {guideTopics.map((topic) => (
+          <a className="info-card" key={topic} href={`/${language}/guide/${topic}`}>
+            <h3 className="info-card-title">{guides[language][topic].title}</h3>
+            <p className="info-card-note">{guides[language][topic].description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Footer() {
   const { t, locale } = useLang();
   return (
@@ -499,6 +521,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <About />
       <Visiting />
       <Transportation />
+      <VisitGuides />
       <History />
       <Tips />
       <Gallery />

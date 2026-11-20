@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "@fontsource-variable/cormorant-garamond";
+@import "@fontsource-variable/cormorant-garamond/wght-italic.css";
+@import "@fontsource-variable/dm-sans";
 
 :root {
   --color-deep: #0b2b36;
@@ -11,8 +14,8 @@
   --color-earth: #1a1612;
   --color-earth-soft: #2d261f;
   --color-stone: #8a7e72;
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-display: 'Cormorant Garamond Variable', Georgia, serif;
+  --font-body: 'DM Sans Variable', system-ui, sans-serif;
 }
 
 * {
