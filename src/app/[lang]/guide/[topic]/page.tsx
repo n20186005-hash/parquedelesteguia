@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { guides, guideLabels, guideLanguages, guideTopics, type GuideLanguage, type GuideTopic } from "@/i18n/visit-guides";
 
+import { nearbyCopy, nearbyLabels, nearbyTopics, parkDetails } from "@/i18n/nearby";
+
 const parkMap = "https://maps.app.goo.gl/QLrWN8gLZQ4CJkU5A";
 const entranceMap = "https://www.google.com/maps/search/?api=1&query=F5V6%2B76M%2C+Av.+Francisco+de+Miranda%2C+Caracas";
 const stationMap = "https://www.google.com/maps/search/?api=1&query=Estaci%C3%B3n+Miranda+Metro+de+Caracas";
@@ -66,6 +68,8 @@ export default async function GuidePage({ params }: Props) {
   const guide = guides[lang][topic];
   const labels = guideLabels[lang];
   const details = routeDetails[lang];
+  const park = parkDetails[lang];
+  const shared = nearbyLabels[lang];
   return (
     <main className="section">
       <nav aria-label={labels.guides} style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
@@ -110,6 +114,27 @@ export default async function GuidePage({ params }: Props) {
             </ol>
           </section>
         )}
+        <section className="info-card">
+          <h2 className="info-card-title">{shared.management}</h2>
+          <p>{park.management}</p>
+        </section>
+        <div className="info-grid" style={{ marginBlock: "2rem" }}>
+          <section className="info-card">
+            <h2 className="info-card-title">{shared.basics}</h2>
+            <p>{park.access}</p>
+          </section>
+          {topic !== "como-llegar" && (
+            <section className="info-card">
+              <h2 className="info-card-title">{shared.transport}</h2>
+              <Link href={`/${lang}/guide/como-llegar`}>{park.transport}</Link>
+            </section>
+          )}
+          <section className="info-card">
+            <h2 className="info-card-title">{shared.reviews}</h2>
+            <Link href={`/${lang}#reviews`}>{shared.park}</Link>
+            <p><a href={parkMap}>{park.reviews}</a></p>
+          </section>
+        </div>
         <p className="about-text"><a href={officialSource}>{labels.source}</a></p>
         {topic === "horarios" && <p className="about-text"><a href={reopeningSource}>{details.reopening}</a></p>}
       </article>
@@ -118,6 +143,12 @@ export default async function GuidePage({ params }: Props) {
         <ul>
           {guideTopics.filter((item) => item !== topic).map((item) => (
             <li key={item}><Link href={`/${lang}/guide/${item}`}>{guides[lang][item].title}</Link></li>
+          ))}
+        </ul>
+        <h2 className="info-card-title" style={{ marginTop: "1rem" }}>{shared.nearby}</h2>
+        <ul>
+          {nearbyTopics.map((place) => (
+            <li key={place}><Link href={`/${lang}/nearby/${place}`}>{nearbyCopy[lang][place].title}</Link></li>
           ))}
         </ul>
       </aside>

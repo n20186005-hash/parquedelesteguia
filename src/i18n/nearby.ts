@@ -1,0 +1,106 @@
+export const nearbyTopics = ["planetario-humboldt", "museo-del-transporte"] as const;
+
+export const nearbyPlaces = {
+  "planetario-humboldt": {
+    map: "https://www.google.com/maps/search/?api=1&query=Planetario+Humboldt%2C+Caracas",
+    address: "Avenida Francisco de Miranda, Parque del Este, Caracas 1071, Miranda",
+    photo: "/nearby/planetario-humboldt.jpg",
+    width: 250,
+    height: 333,
+    rating: { score: "4.4", count: 1158, name: "Airial", url: "https://airial.travel/attractions/venezuela/caracas/planetario-humboldt-X37h4K4Z" },
+    credit: "https://commons.wikimedia.org/wiki/File:Planetario_Humboldt_Caracas_-_Venezuela_2011_001.JPG",
+    source: "https://www.inparques.gob.ve/Parques%20de%20Recreacion/francisco-de-miranda.html",
+    operatorSource: "https://commons.wikimedia.org/wiki/Planetario_Humboldt",
+  },
+  "museo-del-transporte": {
+    map: "https://www.google.com/maps/search/?api=1&query=Museo+del+Transporte+Guillermo+Jos%C3%A9+Schael%2C+Caracas",
+    address: "Avenida Francisco de Miranda, sector Santa Cecilia, Caracas, Miranda",
+    photo: "/nearby/museo-del-transporte.jpg",
+    width: 330,
+    height: 212,
+    rating: { score: "4.2", count: 1219, name: "Wanderlog", url: "https://wanderlog.com/place/details/4400233/museo-del-transporte-guillermo-jos%C3%A9-schael" },
+    credit: "https://commons.wikimedia.org/wiki/File:Museo_del_Transporte_de_Caracas_1987_001.JPG",
+    source: "https://iamvenezuela.org/2018/07/el-museo-del-transporte-guillermo-jose-schael-hace-rodar-la-historia/",
+  },
+};
+
+export const nearbyLabels = {
+  es: { nearby: "Lugares cercanos", management: "Administración", basics: "Datos básicos", transport: "Cómo llegar", reviews: "Opiniones de visitantes", count: "opiniones", checked: "Consultado el 20/11/2026", view: "Consultar opiniones en Google Maps", source: "Fuente", park: "Información del Parque del Este" },
+  en: { nearby: "Nearby attractions", management: "Management", basics: "Visitor information", transport: "Getting there", reviews: "Visitor reviews", count: "reviews", checked: "Checked November 20, 2026", view: "Read reviews on Google Maps", source: "Source", park: "About East Park" },
+  zh: { nearby: "周邊景點", management: "管理單位", basics: "基本資料", transport: "交通方式", reviews: "遊客評價", count: "則評價", checked: "核對日期 2026 年 11 月 20 日", view: "在 Google 地圖查看評價", source: "資料來源", park: "東方公園資訊" },
+};
+
+export const parkDetails = {
+  es: { management: "El Parque del Este forma parte de los parques de recreación de INPARQUES.", access: "Entrada por la avenida Francisco de Miranda, junto a la estación Miranda de la Línea 1. La entrada general al parque es gratuita.", transport: "Metro Miranda y acceso por la avenida", reviews: "Consultar opiniones del Parque del Este en Google Maps" },
+  en: { management: "East Park is listed as a recreation park by INPARQUES.", access: "Use the Avenida Francisco de Miranda entrance by Miranda station on Line 1. General park admission is free.", transport: "Miranda metro and park entrance", reviews: "Read East Park reviews on Google Maps" },
+  zh: { management: "東方公園是委內瑞拉國家公園管理局（INPARQUES）所列的休憩公園。", access: "公園入口位於弗朗西斯科・德・米蘭達大道，鄰近地鐵 1 號線米蘭達站。公園一般入園免費。", transport: "米蘭達地鐵站與公園入口", reviews: "在 Google 地圖查看東方公園評價" },
+};
+
+export const nearbyCopy = {
+  es: {
+    "planetario-humboldt": {
+      title: "Planetario Humboldt",
+      description: "Una visita de astronomía bajo la cúpula blanca del Parque del Este de Caracas.",
+      manager: "Servicio de Hidrografía y Navegación de la Armada de Venezuela.",
+      basics: "Planetario dentro del parque. Confirma funciones, cupos, horario y condiciones de entrada antes de ir.",
+      transit: "Baja en Miranda, Línea 1. Entra al parque por la avenida Francisco de Miranda y busca la cúpula blanca cerca de la entrada.",
+      history: "Carlos Guinand Sandoz diseñó el edificio. Su proyector óptico Zeiss es una pieza de la historia de la divulgación astronómica caraqueña.",
+      plan: "Si hay función, confirma la hora antes de recorrer el parque. Si solo quieres ver la arquitectura, observa la cúpula y continúa hacia los patios ornamentales.",
+      photo: "Exterior del Planetario Humboldt, fotografía de archivo",
+    },
+    "museo-del-transporte": {
+      title: "Museo del Transporte Guillermo José Schael",
+      description: "Colecciones de vehículos históricos en Santa Cecilia, junto al Parque del Este.",
+      manager: "Fundación Museo del Transporte.",
+      basics: "Museo de historia del transporte inaugurado en 1970. Consulta apertura, entrada y salas disponibles antes de desplazarte.",
+      transit: "Desde Miranda, sigue la avenida Francisco de Miranda hacia Santa Cecilia. Usa la ubicación del museo para llegar a su propio acceso.",
+      history: "La iniciativa de Guillermo José Schael y otros fundadores permitió conservar locomotoras, carruajes, automóviles y aeronaves que documentan la movilidad en Venezuela.",
+      plan: "Si están abiertas las colecciones, compara carruajes y coches antiguos antes de ver las piezas ferroviarias. La fotografía de archivo documenta un Ford Modelo T de 1914.",
+      photo: "Ford Modelo T de 1914 en el museo, fotografía de archivo de 1987",
+    },
+  },
+  en: {
+    "planetario-humboldt": {
+      title: "Humboldt Planetarium",
+      description: "An astronomy stop beneath the white dome inside East Park, Caracas.",
+      manager: "Venezuelan Navy Hydrography and Navigation Service.",
+      basics: "Planetarium inside the park. Confirm showtimes, capacity, opening hours and admission before visiting.",
+      transit: "Take Line 1 to Miranda. Enter East Park from Avenida Francisco de Miranda and look for the white dome near the entrance.",
+      history: "Carlos Guinand Sandoz designed the building. Its Zeiss optical projector is part of the history of astronomy education in Caracas.",
+      plan: "If a show is available, check the start time before exploring the park. For a shorter architectural visit, see the dome and continue to the ornamental courtyards.",
+      photo: "Humboldt Planetarium exterior, archival photograph",
+    },
+    "museo-del-transporte": {
+      title: "Guillermo José Schael Transport Museum",
+      description: "Historical vehicle collections in Santa Cecilia next to East Park.",
+      manager: "Fundación Museo del Transporte.",
+      basics: "Transport history museum inaugurated in 1970. Check opening, admission and exhibit availability before heading there.",
+      transit: "From Miranda station, follow Avenida Francisco de Miranda toward Santa Cecilia. Use the museum map for its separate entrance.",
+      history: "Guillermo José Schael and fellow founders helped preserve locomotives, carriages, cars and aircraft that document the history of travel in Venezuela.",
+      plan: "When the collections are open, compare carriages and early cars before moving on to railway exhibits. The archival photograph shows a 1914 Ford Model T.",
+      photo: "1914 Ford Model T at the museum, archival photograph from 1987",
+    },
+  },
+  zh: {
+    "planetario-humboldt": {
+      title: "洪堡天文館",
+      description: "走進卡拉卡斯東方公園，認識白色圓頂下的天文教育場館。",
+      manager: "委內瑞拉海軍水文與航行部門。",
+      basics: "位於東方公園內。前往前請查詢場次、名額、開放時段與入場方式。",
+      transit: "搭地鐵 1 號線至米蘭達站，從弗朗西斯科・德・米蘭達大道進入公園，留意入口附近的白色圓頂。",
+      history: "建築由卡洛斯・吉南・桑多斯設計。館內的蔡司光學投影機見證了卡拉卡斯的天文教育史。",
+      plan: "若要看放映，先確認開演時間再安排園內步行。短程遊覽可從外面觀察圓頂，再往景觀庭院走。",
+      photo: "洪堡天文館外觀，歷史照片",
+    },
+    "museo-del-transporte": {
+      title: "吉列爾莫・何塞・沙埃爾交通博物館",
+      description: "在東方公園旁的聖塞西莉亞，從車輛收藏了解委內瑞拉交通史。",
+      manager: "交通博物館基金會（Fundación Museo del Transporte）。",
+      basics: "1970 年開館的交通史博物館。出發前請確認開館、入場方式與開放展區。",
+      transit: "從米蘭達站沿弗朗西斯科・德・米蘭達大道往聖塞西莉亞方向。請用博物館專屬地圖找入口。",
+      history: "沙埃爾與其他創辦人保存了機車、馬車、汽車與航空器，呈現委內瑞拉不同時期的交通方式。",
+      plan: "展區開放時，可先比較馬車與早期汽車，再參觀鐵路藏品。歷史照片記錄了館內一輛 1914 年福特 T 型車。",
+      photo: "館內的 1914 年福特 T 型車，1987 年歷史照片",
+    },
+  },
+};

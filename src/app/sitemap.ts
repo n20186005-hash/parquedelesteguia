@@ -2,13 +2,15 @@ import type { MetadataRoute } from 'next';
 
 import { guideLanguages, guideTopics } from "@/i18n/visit-guides";
 
+import { nearbyTopics } from "@/i18n/nearby";
+
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = `https://${process.env.CURRENT_SITE_DOMAIN || "www.parquedelesteguia.com"}`;
 
   const languages = guideLanguages;
-  const routes = ['', '/privacy', '/terms', '/cookies', ...guideTopics.map((topic) => `/guide/${topic}`)];
+  const routes = ['', '/privacy', '/terms', '/cookies', ...guideTopics.map((topic) => `/guide/${topic}`), ...nearbyTopics.map((place) => `/nearby/${place}`)];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
 

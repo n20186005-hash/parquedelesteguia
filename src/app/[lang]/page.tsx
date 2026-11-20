@@ -6,6 +6,8 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 import { guides, guideLabels, guideTopics } from "@/i18n/visit-guides";
 
+import { nearbyCopy, nearbyLabels, nearbyTopics } from "@/i18n/nearby";
+
 const MAPS_URL = "https://maps.app.goo.gl/QLrWN8gLZQ4CJkU5A";
 
 const GALLERY_IMAGES = Array.from({ length: 19 }, (_: number, i: number) => `/gallery/east-park (${i + 1}).jpg`);
@@ -482,6 +484,25 @@ function VisitGuides() {
   );
 }
 
+function NearbyAttractions() {
+  const { locale } = useLang();
+  const language = nearbyCopy[locale] ? locale : "es";
+  return (
+    <section id="nearby-attractions" className="section">
+      <h2 className="section-title">{nearbyLabels[language].nearby}</h2>
+      <div className="section-divider" />
+      <div className="info-grid">
+        {nearbyTopics.map((place) => (
+          <a className="info-card" key={place} href={`/${language}/nearby/${place}`}>
+            <h3 className="info-card-title">{nearbyCopy[language][place].title}</h3>
+            <p className="info-card-note">{nearbyCopy[language][place].description}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Footer() {
   const { t, locale } = useLang();
   return (
@@ -529,6 +550,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <Reviews />
       <FAQ />
       <Location />
+      <NearbyAttractions />
       <Footer />
     </LangProvider>
   );
