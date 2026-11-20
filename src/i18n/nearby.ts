@@ -1,6 +1,30 @@
-export const nearbyTopics = ["planetario-humboldt", "museo-del-transporte", "plaza-francia", "la-estancia"] as const;
+export const nearbyTopics = ["planetario-humboldt", "museo-del-transporte", "plaza-francia", "la-estancia", "lago-9-leander", "patios-ornamentales"] as const;
 
 export const nearbyPlaces = {
+  "patios-ornamentales": {
+    map: "https://www.google.com/maps/search/?api=1&query=Patios+Ornamentales%2C+sector+norte+del+Parque+del+Este%2C+Caracas",
+    address: "Parque Generalísimo Francisco de Miranda, avenida Francisco de Miranda, Caracas 1071, Miranda",
+    photo: "/nearby/patios-ornamentales.jpg",
+    width: 250,
+    height: 288,
+    author: "Veronidae",
+    credit: "https://commons.wikimedia.org/wiki/File:Patios_en_el_sector_Norte_Parque_Generalisimo_Francisco_de_Miranda_Caracas_-_Venezuela.jpg",
+    source: "https://www.inparques.gob.ve/Parques%20de%20Recreacion/francisco-de-miranda.html",
+    license: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/",
+  },
+  "lago-9-leander": {
+    map: "https://www.google.com/maps/search/?api=1&query=Buque+Leander%2C+Lago+9%2C+Parque+del+Este%2C+Caracas",
+    address: "Parque Generalísimo Francisco de Miranda, avenida Francisco de Miranda, Caracas 1071, Miranda",
+    photo: "/nearby/lago-9-leander.jpg",
+    width: 330,
+    height: 145,
+    author: "Zerojosefer",
+    credit: "https://commons.wikimedia.org/wiki/File:Barco_Bergatin_Leander.jpg",
+    source: "https://www.inparques.gob.ve/Parques%20de%20Recreacion/francisco-de-miranda.html",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+  },
   "la-estancia": {
     map: "https://www.google.com/maps/search/?api=1&query=PDVSA+Centro+de+Arte+La+Estancia%2C+Altamira%2C+Chacao%2C+Caracas",
     address: "Avenida Francisco de Miranda, Altamira, Chacao, Caracas, Miranda",
@@ -62,6 +86,26 @@ export const parkDetails = {
 
 export const nearbyCopy = {
   es: {
+    "patios-ornamentales": {
+      title: "Patios ornamentales",
+      description: "Muros de azulejos, agua y vegetación en el sector norte del parque.",
+      manager: "Instituto Nacional de Parques (INPARQUES).",
+      basics: "Dentro del Parque del Este. Confirma el acceso del sector en la entrada.",
+      transit: "Entra desde Miranda y sigue las señales hacia los patios del sector norte.",
+      history: "Los patios forman parte del diseño paisajístico de Roberto Burle Marx y su equipo.",
+      plan: "Detente en el umbral de cada patio para apreciar el cambio de luz y sombra.",
+      photo: "Patios ornamentales · Fotografía de Wikimedia Commons",
+    },
+    "lago-9-leander": {
+      title: "Lago 9 y Buque Leander",
+      description: "El lago artificial donde se exhibe una réplica del barco de Francisco de Miranda.",
+      manager: "Instituto Nacional de Parques (INPARQUES).",
+      basics: "Dentro del Parque del Este. Confirma el acceso del sector en la entrada.",
+      transit: "Sigue las señales a Lago 9 desde la entrada de Miranda.",
+      history: "La réplica recuerda la expedición de Miranda en 1806.",
+      plan: "Comienza por el paseo de la orilla y pregunta en el lugar si están operando los botes.",
+      photo: "Lago 9 y Buque Leander · Fotografía de Wikimedia Commons",
+    },
     "la-estancia": {
       title: "Centro de Arte La Estancia",
       description: "Una antigua hacienda cafetalera convertida en centro cultural en Altamira.",
@@ -104,6 +148,26 @@ export const nearbyCopy = {
     },
   },
   en: {
+    "patios-ornamentales": {
+      title: "Ornamental Courtyards",
+      description: "Tiled walls, water and planting in East Park’s northern sector.",
+      manager: "National Parks Institute (INPARQUES).",
+      basics: "Inside East Park. Confirm sector access at the entrance.",
+      transit: "Enter from Miranda and follow signs to the northern courtyards.",
+      history: "The courtyards are part of the landscape design by Roberto Burle Marx and his team.",
+      plan: "Pause at each courtyard entrance to notice the transition from sunlight to shade.",
+      photo: "Ornamental Courtyards · Photograph from Wikimedia Commons",
+    },
+    "lago-9-leander": {
+      title: "Lake 9 and the Leander",
+      description: "An artificial lake with a replica of Francisco de Miranda’s ship.",
+      manager: "National Parks Institute (INPARQUES).",
+      basics: "Inside East Park. Confirm sector access at the entrance.",
+      transit: "Follow the signs to Lake 9 from the Miranda entrance.",
+      history: "The replica commemorates Miranda’s 1806 expedition.",
+      plan: "Start with the public shore path and ask on site if boats are operating.",
+      photo: "Lake 9 and the Leander · Photograph from Wikimedia Commons",
+    },
     "la-estancia": {
       title: "La Estancia Art Center",
       description: "An old coffee estate turned cultural centre in Altamira.",
@@ -146,6 +210,26 @@ export const nearbyCopy = {
     },
   },
   zh: {
+    "patios-ornamentales": {
+      title: "景觀庭院",
+      description: "走進東方公園北側的磁磚牆、水景與植栽之間。",
+      manager: "委內瑞拉國家公園管理局（INPARQUES）。",
+      basics: "位於東方公園內，各區通行以入口公告為準。",
+      transit: "從米蘭達入口入園，循北側庭院指標步行。",
+      history: "庭院屬羅伯托・布爾勒・馬克思及其團隊的園林設計。",
+      plan: "到每座庭院入口時停一下，觀察日照與樹蔭的變化。",
+      photo: "景觀庭院 · 維基共享資源照片",
+    },
+    "lago-9-leander": {
+      title: "第九湖與利安德號",
+      description: "在東方公園的人工湖畔觀看利安德號仿造船。",
+      manager: "委內瑞拉國家公園管理局（INPARQUES）。",
+      basics: "位於東方公園內，各區通行以入口公告為準。",
+      transit: "從米蘭達入口沿指標前往第九湖。",
+      history: "仿造船紀念弗朗西斯科・德・米蘭達 1806 年的航程。",
+      plan: "先走公共湖畔步道，再向現場人員詢問腳踏船是否營運。",
+      photo: "第九湖與利安德號 · 維基共享資源照片",
+    },
     "la-estancia": {
       title: "拉埃斯坦西亞藝術中心",
       description: "從阿爾塔米拉的舊咖啡莊園，走進卡拉卡斯的展覽與文化場館。",

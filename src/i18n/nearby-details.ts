@@ -6,6 +6,20 @@ export const nearbyDetailLabels = {
 
 export const nearbyDetails = {
   es: {
+    "patios-ornamentales": {
+      about: "INPARQUES presenta este lugar como parte de la visita al Parque del Este.",
+      observe: "Compara los patrones de los azulejos con las formas de los estanques y la vegetación.",
+      walk: ["Entra desde Miranda y sigue las señales hacia los patios del sector norte.", "Después, regresa hacia el acceso de Miranda por los senderos abiertos."],
+      photo: "Desde el umbral, encuadra un muro de azulejos y un estanque.",
+      faq: ["¿Puedo combinar los patios con el planetario?", "Sí. Ubica la cúpula cerca de la entrada y consulta las funciones por separado."],
+    },
+    "lago-9-leander": {
+      about: "INPARQUES presenta este lugar como parte de la visita al Parque del Este.",
+      observe: "Recorre la orilla para observar la proa y los mástiles.",
+      walk: ["Sigue las señales a Lago 9 desde la entrada de Miranda.", "Después, regresa hacia el acceso de Miranda por los senderos abiertos."],
+      photo: "Encuadra el casco de perfil y su reflejo desde la orilla.",
+      faq: ["¿Se puede subir al barco?", "Consulta por separado el acceso al buque y los servicios del lago."],
+    },
     "la-estancia": {
       about: "La sede de Altamira conserva el carácter de una hacienda dentro de un corredor urbano concurrido. Su programación incluye actividades artísticas y culturales.",
       observe: "Compara la transición de la avenida al jardín con la escala doméstica de la casa histórica. Desde el jardín, fíjate en cómo se relaciona la fachada con los senderos.",
@@ -36,6 +50,20 @@ export const nearbyDetails = {
     },
   },
   en: {
+    "patios-ornamentales": {
+      about: "INPARQUES identifies this location as a visitor highlight within East Park.",
+      observe: "Compare the tile patterns with the outlines of the pools and planting.",
+      walk: ["Enter from Miranda and follow signs to the northern courtyards.", "Afterwards, use the open paths back toward the Miranda entrance."],
+      photo: "From a threshold, frame a tiled wall and a pool together.",
+      faq: ["Can I combine the courtyards with the planetarium?", "Yes. Look for the dome near the entrance and check showtimes separately."],
+    },
+    "lago-9-leander": {
+      about: "INPARQUES identifies this location as a visitor highlight within East Park.",
+      observe: "Walk the open shore to see the bow and masts from different angles.",
+      walk: ["Follow the signs to Lake 9 from the Miranda entrance.", "Afterwards, use the open paths back toward the Miranda entrance."],
+      photo: "Frame the hull in profile with its reflection from the shore.",
+      faq: ["Can I board the ship?", "Check access to the ship and lake services separately."],
+    },
     "la-estancia": {
       about: "Altamira’s site retains the character of an estate on a busy urban corridor. The centre hosts arts and cultural programmes.",
       observe: "Notice the shift from the avenue into the garden and the domestic scale of the historic house. From the garden, compare the facade with the line of the paths.",
@@ -66,6 +94,20 @@ export const nearbyDetails = {
     },
   },
   zh: {
+    "patios-ornamentales": {
+      about: "INPARQUES 將此處列為東方公園的遊覽地點。",
+      observe: "對照磁磚圖案、池岸輪廓和沿牆植栽。",
+      walk: ["從米蘭達入口入園，循北側庭院指標步行。", "參觀後沿開放步道返回米蘭達入口。"],
+      photo: "在庭院門口取景，把磁磚牆和水池放在同一畫面。",
+      faq: ["可以一起參觀天文館嗎？", "可以先在入口附近看圓頂；放映場次請另外查詢。"],
+    },
+    "lago-9-leander": {
+      about: "INPARQUES 將此處列為東方公園的遊覽地點。",
+      observe: "沿開放岸邊步道走一段，從不同角度觀察船頭與桅杆。",
+      walk: ["從米蘭達入口沿指標前往第九湖。", "參觀後沿開放步道返回米蘭達入口。"],
+      photo: "從湖畔側向取景，讓船身與倒影同時入鏡。",
+      faq: ["可以登上仿造船嗎？", "登船及湖上服務請分別向現場人員查詢。"],
+    },
     "la-estancia": {
       about: "這座舊莊園坐落在繁忙的市區大道旁，現為藝術與文化活動場地。",
       observe: "從大道轉入花園後，留意歷史宅邸的尺度，並從步道觀察立面與植栽的關係。",
