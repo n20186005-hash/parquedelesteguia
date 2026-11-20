@@ -6,6 +6,34 @@ export const nearbyDetailLabels = {
 
 export const nearbyDetails = {
   es: {
+    "terrario": {
+      about: "Un espacio dedicado a reptiles y a la fauna venezolana.",
+      observe: "La vista exterior permite mostrar cómo el edificio se integra con la vegetación. Evita el flash en los recintos.",
+      walk: ["Desde el acceso de Miranda, busca la cúpula del planetario y pregunta por el acceso del terrario.", "Sigue por los senderos abiertos para continuar el recorrido por el parque."],
+      photo: "La vista exterior permite mostrar cómo el edificio se integra con la vegetación. Evita el flash en los recintos.",
+      faq: ["¿Abre con el mismo horario que el parque?", "Comprueba el horario y el acceso del terrario por separado."],
+    },
+    "aviario": {
+      about: "Un espacio de observación de aves cerca del planetario.",
+      observe: "Si se permite fotografiar, evita el flash y enfoca desde el lado público del recinto.",
+      walk: ["Entra por Miranda, ubica el Planetario Humboldt y consulta la señalización hacia el aviario.", "Sigue por los senderos abiertos para continuar el recorrido por el parque."],
+      photo: "Si se permite fotografiar, evita el flash y enfoca desde el lado público del recinto.",
+      faq: ["¿Está garantizado ver un águila harpía?", "La fotografía es histórica. Consulta qué sectores y animales se pueden observar durante tu visita."],
+    },
+    "concha-acustica": {
+      about: "El escenario al aire libre del Parque del Este.",
+      observe: "Desde la zona pública, encuadra la cubierta completa junto al borde del escenario.",
+      walk: ["Desde la entrada de Miranda, pregunta por la caminería a la concha acústica y sigue las indicaciones del parque.", "Sigue por los senderos abiertos para continuar el recorrido por el parque."],
+      photo: "Desde la zona pública, encuadra la cubierta completa junto al borde del escenario.",
+      faq: ["¿Hay espectáculos todos los días?", "Consulta la programación local; la visita al parque no garantiza una función."],
+    },
+    "jardin-xerofitico": {
+      about: "Un jardín de plantas adaptadas a la sequía.",
+      observe: "Fotografía las siluetas laterales desde el sendero y evita acercarte a las espinas.",
+      walk: ["Desde el metro Miranda, entra por la avenida Francisco de Miranda y pregunta por el sendero señalizado hacia el jardín xerofítico.", "Sigue por los senderos abiertos para continuar el recorrido por el parque."],
+      photo: "Fotografía las siluetas laterales desde el sendero y evita acercarte a las espinas.",
+      faq: ["¿Puedo acercarme a las plantas?", "Obsérvalas desde el sendero y respeta los bordes de plantación."],
+    },
     "patios-ornamentales": {
       about: "INPARQUES presenta este lugar como parte de la visita al Parque del Este.",
       observe: "Compara los patrones de los azulejos con las formas de los estanques y la vegetación.",
@@ -50,6 +78,34 @@ export const nearbyDetails = {
     },
   },
   en: {
+    "terrario": {
+      about: "An exhibit space for reptiles and Venezuelan wildlife.",
+      observe: "The exterior shows how the building sits among the plants. Avoid flash around enclosures.",
+      walk: ["From the Miranda entrance, find the planetarium dome and ask for the terrarium entrance.", "Continue on open paths to the next stop inside the park."],
+      photo: "The exterior shows how the building sits among the plants. Avoid flash around enclosures.",
+      faq: ["Does it follow park opening hours?", "Confirm terrarium hours and access separately."],
+    },
+    "aviario": {
+      about: "A bird observation area near the planetarium.",
+      observe: "If photography is permitted, avoid flash and shoot from the public side of the enclosure.",
+      walk: ["Enter from Miranda, locate the Humboldt Planetarium and check signs for the aviary.", "Continue on open paths to the next stop inside the park."],
+      photo: "If photography is permitted, avoid flash and shoot from the public side of the enclosure.",
+      faq: ["Will I see a harpy eagle?", "The photograph is historical. Ask which sections and animals can be seen during your visit."],
+    },
+    "concha-acustica": {
+      about: "East Park’s open-air stage.",
+      observe: "From the public area, frame the canopy together with the stage edge.",
+      walk: ["From the Miranda entrance, ask for the path to the acoustic shell and follow park signage.", "Continue on open paths to the next stop inside the park."],
+      photo: "From the public area, frame the canopy together with the stage edge.",
+      faq: ["Are there performances every day?", "Check local listings for events before planning to attend a performance."],
+    },
+    "jardin-xerofitico": {
+      about: "A garden of plants adapted to dry conditions.",
+      observe: "Photograph the plants in profile from the path and keep clear of spines.",
+      walk: ["Enter from Avenida Francisco de Miranda beside Miranda station and ask for the signed path to the xerophytic garden.", "Continue on open paths to the next stop inside the park."],
+      photo: "Photograph the plants in profile from the path and keep clear of spines.",
+      faq: ["Can I approach the plants?", "View them from the path and respect planting boundaries."],
+    },
     "patios-ornamentales": {
       about: "INPARQUES identifies this location as a visitor highlight within East Park.",
       observe: "Compare the tile patterns with the outlines of the pools and planting.",
@@ -94,6 +150,34 @@ export const nearbyDetails = {
     },
   },
   zh: {
+    "terrario": {
+      about: "認識爬行動物及委內瑞拉野生動物的場館。",
+      observe: "可從外側拍攝建築與植栽的關係；展示區周圍請關閉閃光燈。",
+      walk: ["從米蘭達入口入園，辨認天文館圓頂，再詢問爬蟲館入口。", "參觀後沿開放步道續遊園區。"],
+      photo: "可從外側拍攝建築與植栽的關係；展示區周圍請關閉閃光燈。",
+      faq: ["開放時段和公園相同嗎？", "請另向現場確認爬蟲館的入場方式與時段。"],
+    },
+    "aviario": {
+      about: "天文館附近的鳥類觀察區。",
+      observe: "若允許攝影，請在參觀區取景並關閉閃光燈。",
+      walk: ["由米蘭達入口入園，辨認洪堡天文館後循鳥舍指標。", "參觀後沿開放步道續遊園區。"],
+      photo: "若允許攝影，請在參觀區取景並關閉閃光燈。",
+      faq: ["當天一定能看到角雕嗎？", "照片是歷史紀錄，當天開放區域及可觀察動物請向現場人員查詢。"],
+    },
+    "concha-acustica": {
+      about: "東方公園的戶外表演空間。",
+      observe: "在公共區域把整片頂棚與舞台邊緣一起取景。",
+      walk: ["由米蘭達入口入園，詢問通往露天音樂台的步道並依指標前往。", "參觀後沿開放步道續遊園區。"],
+      photo: "在公共區域把整片頂棚與舞台邊緣一起取景。",
+      faq: ["每天都有演出嗎？", "若想觀賞演出，請先查閱現場或主辦方的活動公告。"],
+    },
+    "jardin-xerofitico": {
+      about: "觀察適應乾旱環境的植物。",
+      observe: "在步道上側拍植物輪廓，與帶刺植株保持距離。",
+      walk: ["由米蘭達站旁的大道入口入園，詢問前往旱生植物園的指標步道。", "參觀後沿開放步道續遊園區。"],
+      photo: "在步道上側拍植物輪廓，與帶刺植株保持距離。",
+      faq: ["能走近植株嗎？", "請在步道上觀察，避開種植區。"],
+    },
     "patios-ornamentales": {
       about: "INPARQUES 將此處列為東方公園的遊覽地點。",
       observe: "對照磁磚圖案、池岸輪廓和沿牆植栽。",
