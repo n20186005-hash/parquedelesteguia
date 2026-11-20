@@ -1,6 +1,18 @@
-export const nearbyTopics = ["planetario-humboldt", "museo-del-transporte", "plaza-francia", "la-estancia", "lago-9-leander", "patios-ornamentales", "jardin-xerofitico", "concha-acustica", "aviario", "terrario", "parque-simon-bolivar", "fuente-las-cortinas"] as const;
+export const nearbyTopics = ["planetario-humboldt", "museo-del-transporte", "plaza-francia", "la-estancia", "lago-9-leander", "patios-ornamentales", "jardin-xerofitico", "concha-acustica", "aviario", "terrario", "parque-simon-bolivar", "fuente-las-cortinas", "plaza-bolivar-chacao"] as const;
 
 export const nearbyPlaces = {
+  "plaza-bolivar-chacao": {
+    map: "https://www.google.com/maps/search/?api=1&query=Plaza+Bol%C3%ADvar+de+Chacao%2C+Avenida+Mohedano%2C+Chacao%2C+Caracas",
+    address: "Avenida Mohedano, casco histórico de Chacao, Miranda, Venezuela",
+    photo: "/nearby/plaza-bolivar-chacao.jpg",
+    width: 330,
+    height: 247,
+    author: "Auxi84",
+    credit: "https://commons.wikimedia.org/wiki/File:Plaza_Bol%C3%ADvar_de_Chacao.JPG",
+    source: "https://guiaccs.com/obras/iglesia-de-san-jose-y-plaza-bolivar-de-chacao/",
+    license: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/",
+  },
   "fuente-las-cortinas": {
     map: "https://www.google.com/maps/search/?api=1&query=Fuente+Las+Cortinas%2C+Parque+del+Este%2C+Caracas",
     address: "Sector norte, Parque Generalísimo Francisco de Miranda, avenida Francisco de Miranda, Caracas 1071, Miranda",
@@ -162,6 +174,16 @@ export const parkDetails = {
 
 export const nearbyCopy = {
   es: {
+    "plaza-bolivar-chacao": {
+      title: "Plaza Bolívar de Chacao",
+      description: "La plaza del casco fundacional, frente a la iglesia de San José.",
+      manager: "Alcaldía de Chacao.",
+      basics: "Espacio público de la avenida Mohedano. Los actos municipales pueden modificar el acceso.",
+      transit: "Baja en Chacao (Línea 1) y camina hacia el casco histórico por las calles locales; usa los cruces señalizados.",
+      history: "El trazado de 1768 organizó nueve manzanas alrededor de esta plaza. La reforma de 2011 reubicó la estatua ecuestre cerca de la iglesia.",
+      plan: "Busca primero la estatua y después observa cómo las fachadas vecinas delimitan la plaza.",
+      photo: "Plaza Bolívar en el casco histórico de Chacao",
+    },
     "fuente-las-cortinas": {
       title: "Fuente Las Cortinas",
       description: "Una cortina de agua en el sector norte del Parque del Este.",
@@ -284,6 +306,16 @@ export const nearbyCopy = {
     },
   },
   en: {
+    "plaza-bolivar-chacao": {
+      title: "Bolívar Square in Chacao",
+      description: "The square at the heart of historic Chacao, facing San José Church.",
+      manager: "Municipality of Chacao.",
+      basics: "Public square on Avenida Mohedano. Civic events may affect access.",
+      transit: "Take Metro Line 1 to Chacao and use local streets and marked crossings toward the historic centre.",
+      history: "Chacao’s 1768 plan arranged nine blocks around the square. The 2011 redesign moved the equestrian statue closer to the church.",
+      plan: "Start at the statue, then look at how the surrounding façades define the square.",
+      photo: "Bolívar Square in historic Chacao",
+    },
     "fuente-las-cortinas": {
       title: "Las Cortinas Fountain",
       description: "A water curtain in East Park’s northern sector.",
@@ -406,6 +438,16 @@ export const nearbyCopy = {
     },
   },
   zh: {
+    "plaza-bolivar-chacao": {
+      title: "查考玻利瓦爾廣場",
+      description: "在聖何塞教堂前認識查考舊城的公共空間。",
+      manager: "查考市政府。",
+      basics: "位於莫埃達諾大道的公共廣場。市政活動期間，部分空間可能調整通行。",
+      transit: "搭地鐵 1 號線至查考站，沿街步行往舊城區並使用行人穿越道。",
+      history: "1768 年的聚落格局以廣場為中心，周圍分布九個街廓。2011 年整修後，玻利瓦爾騎馬雕像移到教堂旁。",
+      plan: "先找騎馬雕像，再沿廣場邊緣觀察周圍立面如何界定公共空間。",
+      photo: "查考舊城的玻利瓦爾廣場",
+    },
     "fuente-las-cortinas": {
       title: "水幕噴泉",
       description: "在東方公園北側看水流垂落成幕。",

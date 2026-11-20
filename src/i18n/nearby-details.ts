@@ -6,6 +6,13 @@ export const nearbyDetailLabels = {
 
 export const nearbyDetails = {
   es: {
+    "plaza-bolivar-chacao": {
+      about: "La plaza recibe actos cívicos y actividades vecinales. La iglesia de San José ocupa el costado norte y ayuda a leer el trazado fundacional.",
+      observe: "Compara el espacio abierto con la escala de las calles que llegan a sus bordes.",
+      walk: ["Sal del metro Chacao hacia el casco histórico.", "Llega a la avenida Mohedano y rodea la plaza a pie.", "Detente frente a la iglesia y vuelve por el mismo acceso."],
+      photo: "Desde el lado opuesto a la iglesia, incluye la estatua ecuestre y la fachada en el encuadre.",
+      faq: ["¿Es la Plaza Bolívar del centro de Caracas?", "Esta plaza está en el municipio Chacao. Comprueba que el mapa indique la avenida Mohedano."],
+    },
     "fuente-las-cortinas": {
       about: "INPARQUES gestiona el parque. La fuente es una parada corta en el recorrido por los patios del sector norte.",
       observe: "Cuando circula el agua, observa cómo la caída vertical contrasta con el borde horizontal del estanque.",
@@ -92,6 +99,13 @@ export const nearbyDetails = {
     },
   },
   en: {
+    "plaza-bolivar-chacao": {
+      about: "The square hosts civic and community events. San José Church anchors the north side of the historic layout.",
+      observe: "Compare the open square with the scale of the streets that meet its edges.",
+      walk: ["Leave Chacao metro station toward the historic centre.", "Reach Avenida Mohedano and walk around the square.", "Pause in front of the church, then return by your arrival route."],
+      photo: "From the side opposite the church, frame the equestrian statue with the church façade.",
+      faq: ["Is this the Bolívar Square in downtown Caracas?", "This square is in Chacao municipality. Look for Avenida Mohedano on the map."],
+    },
     "fuente-las-cortinas": {
       about: "INPARQUES manages the park. The fountain is a short stop on a walk through the northern courtyards.",
       observe: "When the water is running, compare its vertical fall with the horizontal edge of the pool.",
@@ -178,6 +192,13 @@ export const nearbyDetails = {
     },
   },
   zh: {
+    "plaza-bolivar-chacao": {
+      about: "廣場承辦市政儀式與社區活動。北側的聖何塞教堂是辨認舊城格局的地標。",
+      observe: "從廣場中央走到邊緣，體會開放空間與周圍街道的尺度變化。",
+      walk: ["從查考地鐵站往舊城區出站。", "走到莫埃達諾大道，沿步行空間繞廣場一圈。", "在聖何塞教堂前停留，再沿來時路折返。"],
+      photo: "從教堂對側取景，讓騎馬雕像與教堂立面同時入鏡。",
+      faq: ["這是卡拉卡斯市中心的玻利瓦爾廣場嗎？", "這一處在查考市，導航時請核對莫埃達諾大道。"],
+    },
     "fuente-las-cortinas": {
       about: "公園由 INPARQUES 管理。遊覽北側庭院時，可順路停留看水幕。",
       observe: "水景啟用時，可比較垂直水幕與水平池沿的線條。",
