@@ -23,7 +23,7 @@ export const guides: Record<GuideLanguage, Record<GuideTopic, Guide>> = {
       title: "Horario del Parque del Este y entrada",
       description: "Cómo comprobar si el Parque del Este está abierto hoy, qué preguntar si vas un lunes y cómo planificar la entrada al parque y al planetario.",
       sections: [
-        ["¿Está abierto hoy el Parque del Este?", "Confirma con INPARQUES el horario de la fecha concreta y la hora de último ingreso. La ficha oficial describe el parque y sus atractivos, pero no publica un horario semanal completo. Comprueba también si hay cambios por feriados o cierres parciales."],
+        ["¿Está abierto hoy el Parque del Este?", "En julio de 2026 se anunció la reapertura de martes a domingo, de 5:30 a 19:30, con mantenimiento los lunes. Confirma con INPARQUES el horario de tu fecha y la hora de último ingreso. La ficha oficial describe el parque y sus atractivos, pero no publica un horario semanal completo. Comprueba también si hay cambios por feriados o cierres parciales."],
         ["¿Abre los lunes?", "Si tu viaje depende de un lunes, pregunta por esa fecha y por el acceso de la avenida Francisco de Miranda antes de salir. Conviene dejar un día alternativo si no consigues confirmar la apertura."],
         ["Entrada al parque y actividades", "La entrada general al parque es gratuita. Consulta por separado las funciones y condiciones de acceso del Planetario Humboldt y la disponibilidad de los botes del Lago 9. Si dispones de poco tiempo, centra la visita en los patios ornamentales y deja el lago para una segunda parada."],
       ],
@@ -53,7 +53,7 @@ export const guides: Record<GuideLanguage, Record<GuideTopic, Guide>> = {
       title: "East Park opening hours and admission",
       description: "Find out how to check whether Parque del Este is open today, what to ask before a Monday visit and how to plan for the planetarium.",
       sections: [
-        ["Is East Park open today?", "Ask INPARQUES about your visit date and the last admission time. Its park listing describes the main attractions but does not publish a full weekly schedule. Check for holiday changes and partial closures as well."],
+        ["Is East Park open today?", "The July 2026 reopening announcement gave hours of 5:30 AM–7:30 PM Tuesday through Sunday, with Monday maintenance. Ask INPARQUES about your visit date and the last admission time. Its park listing describes the main attractions but does not publish a full weekly schedule. Check for holiday changes and partial closures as well."],
         ["Can you visit on a Monday?", "If you are planning a Monday visit, confirm that specific date and ask about access from Avenida Francisco de Miranda. Keep an alternate day available if you cannot confirm opening."],
         ["Park admission and activities", "General park admission is free. Check Planetario Humboldt showtimes and entry arrangements separately, along with pedal boat availability at Lake 9. On a short visit, start with the ornamental courtyards and add the lake if time permits."],
       ],
@@ -83,7 +83,7 @@ export const guides: Record<GuideLanguage, Record<GuideTopic, Guide>> = {
       title: "卡拉卡斯東方公園開放時間與門票",
       description: "查詢東方公園今天是否開放、星期一能否入園，以及如何安排洪堡天文館及湖區遊覽。",
       sections: [
-        ["東方公園今天有開嗎？", "出發前向委內瑞拉國家公園管理局（INPARQUES）查詢到訪當天的開放時間與最晚入園時間。官方景點頁介紹了園內設施，但未列出完整的每週時段。假日也請留意臨時調整及部分區域關閉的公告。"],
+        ["東方公園今天有開嗎？", "2026 年 7 月的復園公告列出週二至週日 05:30–19:30，週一維護。出發前請向委內瑞拉國家公園管理局（INPARQUES）查詢到訪當天的開放時間及最晚入園時間。官方景點頁介紹了園內設施，但未列出完整的每週時段。假日也請留意臨時調整及部分區域關閉的公告。"],
         ["星期一可以入園嗎？", "如果計畫星期一前往，請確認該日期及弗朗西斯科・德・米蘭達大道入口是否開放。若無法在出發前取得確認，可預留另一個到訪日。"],
         ["入園與園內活動", "公園一般入園免費。洪堡天文館的場次及入場方式、第九湖的腳踏船營運情形，請分別查詢。時間較短可先逛景觀庭院，再視行程加上湖區。"],
       ],

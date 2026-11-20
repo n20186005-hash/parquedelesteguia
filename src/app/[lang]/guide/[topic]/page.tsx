@@ -4,8 +4,30 @@ import { notFound } from "next/navigation";
 import { guides, guideLabels, guideLanguages, guideTopics, type GuideLanguage, type GuideTopic } from "@/i18n/visit-guides";
 
 const parkMap = "https://maps.app.goo.gl/QLrWN8gLZQ4CJkU5A";
+const entranceMap = "https://www.google.com/maps/search/?api=1&query=F5V6%2B76M%2C+Av.+Francisco+de+Miranda%2C+Caracas";
 const stationMap = "https://www.google.com/maps/search/?api=1&query=Estaci%C3%B3n+Miranda+Metro+de+Caracas";
 const officialSource = "https://www.inparques.gob.ve/Parques%20de%20Recreacion/francisco-de-miranda.html";
+const reopeningSource = "https://noticiavenezuela.com/noticias/el-parque-francisco-de-miranda-reabrio-sus-puertas-al-publico/";
+const routeDetails = {
+  es: {
+    stops: ["Entrada de Miranda", "Planetario Humboldt", "Patios ornamentales", "Lago 9 · Leander"],
+    caption: "Esquema del recorrido. Sigue la señalización del parque.",
+    entrance: "Entrada del parque en Google Maps",
+    reopening: "Horario anunciado en la reapertura de julio de 2026",
+  },
+  en: {
+    stops: ["Miranda entrance", "Humboldt Planetarium", "Ornamental courtyards", "Lake 9 · Leander"],
+    caption: "Schematic route. Follow the signs inside the park.",
+    entrance: "Park entrance on Google Maps",
+    reopening: "Hours announced at the July 2026 reopening",
+  },
+  zh: {
+    stops: ["米蘭達入口", "洪堡天文館", "景觀庭院", "第九湖・利安德號"],
+    caption: "步行路線示意。園內請依現場指標行走。",
+    entrance: "在 Google 地圖查看公園入口",
+    reopening: "2026 年 7 月復園時公布的開放時間",
+  },
+};
 const languageNames = { es: "Español", en: "English", zh: "中文" };
 
 type Props = { params: Promise<{ lang: string; topic: string }> };
@@ -43,6 +65,7 @@ export default async function GuidePage({ params }: Props) {
   const { lang, topic } = await readRoute(params);
   const guide = guides[lang][topic];
   const labels = guideLabels[lang];
+  const details = routeDetails[lang];
   return (
     <main className="section">
       <nav aria-label={labels.guides} style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
@@ -58,9 +81,10 @@ export default async function GuidePage({ params }: Props) {
           <h1 className="section-title">{guide.title}</h1>
           <div className="section-divider" />
           <p className="about-text">{guide.description}</p>
-          <a className="maps-link" href={topic === "como-llegar" ? stationMap : parkMap}>
-            {topic === "como-llegar" ? labels.station : labels.maps}
-          </a>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: ".75rem" }}>
+            {topic === "como-llegar" && <a className="maps-link" href={stationMap}>{labels.station}</a>}
+            <a className="maps-link" href={topic === "como-llegar" ? entranceMap : parkMap}>{topic === "como-llegar" ? details.entrance : labels.maps}</a>
+          </div>
         </header>
         {guide.sections.map(([heading, body]) => (
           <section key={heading} style={{ marginBlock: "2rem" }}>
@@ -71,12 +95,23 @@ export default async function GuidePage({ params }: Props) {
         {guide.steps && (
           <section style={{ marginBlock: "2rem" }}>
             <h2 className="info-card-title">{labels.route}</h2>
+            <figure style={{ margin: "1rem 0" }}>
+              <ol className="info-grid">
+                {details.stops.map((stop, index) => (
+                  <li key={stop} className="info-card">
+                    <h3 className="info-card-title">{index + 1}. {stop}</h3>
+                  </li>
+                ))}
+              </ol>
+              <figcaption className="info-card-note">{details.caption}</figcaption>
+            </figure>
             <ol className="about-text" style={{ paddingInlineStart: "1.5rem", listStyle: "decimal" }}>
               {guide.steps.map((step) => <li key={step}>{step}</li>)}
             </ol>
           </section>
         )}
         <p className="about-text"><a href={officialSource}>{labels.source}</a></p>
+        {topic === "horarios" && <p className="about-text"><a href={reopeningSource}>{details.reopening}</a></p>}
       </article>
       <aside className="info-card">
         <h2 className="info-card-title">{labels.guides}</h2>

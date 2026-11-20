@@ -126,7 +126,7 @@ function About() {
 }
 
 function Visiting() {
-  const { t } = useLang();
+  const { t, locale } = useLang();
   const cards = [
     { title: t.visiting.hours.title, content: t.visiting.hours.content, note: t.visiting.hours.note },
     { title: t.visiting.price.title, content: t.visiting.price.content, note: t.visiting.price.note },
@@ -146,6 +146,7 @@ function Visiting() {
             {cards.map((c, i) => (
               <div className="info-card" key={i}>
                 <div className="info-card-title">{c.title}</div>
+                {i === 0 && <a href={`/${locale}/guide/horarios`}>{guides[locale]?.horarios.title ?? guides.es.horarios.title}</a>}
                 <div className="info-card-content" style={{ whiteSpace: "pre-line" }}>{c.content}</div>
                 <div className="info-card-note">{c.note}</div>
               </div>
