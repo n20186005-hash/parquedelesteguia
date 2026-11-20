@@ -61,7 +61,7 @@ function Nav() {
 }
 
 function Hero() {
-  const { t } = useLang();
+  const { t, locale } = useLang();
   return (
     <section className="hero">
       <div className="hero-bg" />
@@ -77,6 +77,11 @@ function Hero() {
             <path d="M7 17L17 7M17 7H7M17 7V17" />
           </svg>
         </a>
+        <p style={{ marginTop: "1rem" }}>
+          <a href="#nearby-attractions" style={{ color: "#fff", textDecoration: "underline", textUnderlineOffset: "0.25em" }}>
+            {(nearbyLabels[locale] ?? nearbyLabels.es).nearby}
+          </a>
+        </p>
       </div>
       <div className="hero-meta">
         <div className="hero-rating">4.3</div>
