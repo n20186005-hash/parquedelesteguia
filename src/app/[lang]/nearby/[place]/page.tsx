@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import { guideLanguages, type GuideLanguage } from "@/i18n/visit-guides";
 import { nearbyCopy, nearbyLabels, nearbyPlaces, nearbyTopics } from "@/i18n/nearby";
 
+import { nearbyDetailLabels, nearbyDetails } from "@/i18n/nearby-details";
+
 type Place = (typeof nearbyTopics)[number];
 type Props = { params: Promise<{ lang: string; place: string }> };
 
@@ -42,6 +44,8 @@ export default async function NearbyPlace({ params }: Props) {
   const labels = nearbyLabels[lang];
   const copy = nearbyCopy[lang][place];
   const data = nearbyPlaces[place];
+  const extra = nearbyDetails[lang][place];
+  const detailLabels = nearbyDetailLabels[lang];
   const languageNames = { es: "Español", en: "English", zh: "中文" };
   return (
     <main className="section">
@@ -60,16 +64,24 @@ export default async function NearbyPlace({ params }: Props) {
           <p className="about-text">{copy.description}</p>
           <a className="maps-link" href={data.map}>{data.address}</a>
         </header>
+        <section className="info-card">
+          <h2 className="info-card-title">{detailLabels.about}{lang === "zh" ? "" : " "}{copy.title}</h2>
+          <p><strong>{labels.management}</strong> · {copy.manager}</p>
+          <p>{extra.about}</p>
+          <a href={"operatorSource" in data ? data.operatorSource : data.source}>{labels.source}</a>
+        </section>
         <figure style={{ marginBlock: "2rem" }}>
           <Image src={data.photo} alt={copy.photo} width={data.width} height={data.height} unoptimized style={{ maxWidth: "100%", width: "auto", height: "auto", maxHeight: "28rem" }} />
           <figcaption className="info-card-note">{copy.photo} · <a href={data.credit}>Veronidae / Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></figcaption>
         </figure>
-        <p className="about-text">{copy.history}</p>
-        <p className="about-text">{copy.plan}</p>
-        <section className="info-card">
-          <h2 className="info-card-title">{labels.management}</h2>
-          <p>{copy.manager}</p>
-          {"operatorSource" in data && <a href={data.operatorSource}>{labels.source}</a>}
+        <section>
+          <h2 className="info-card-title">{detailLabels.history}</h2>
+          <p className="about-text">{copy.history}</p>
+          <p className="about-text">{extra.observe}</p>
+        </section>
+        <section>
+          <h2 className="info-card-title">{detailLabels.visit}</h2>
+          <p className="about-text">{copy.plan}</p>
         </section>
         <div className="info-grid" style={{ marginBlock: "2rem" }}>
           <section className="info-card">
@@ -89,6 +101,23 @@ export default async function NearbyPlace({ params }: Props) {
             <a href={data.map}>{labels.view}</a>
           </section>
         </div>
+        <section style={{ marginBlock: "2rem" }}>
+          <h2 className="info-card-title">{detailLabels.walk}</h2>
+          <ol className="about-text" style={{ listStyle: "decimal", paddingInlineStart: "1.5rem" }}>
+            {extra.walk.map((step) => <li key={step}>{step}</li>)}
+          </ol>
+        </section>
+        <section style={{ marginBlock: "2rem" }}>
+          <h2 className="info-card-title">{detailLabels.photo}</h2>
+          <p className="about-text">{extra.photo}</p>
+        </section>
+        <section style={{ marginBlock: "2rem" }}>
+          <h2 className="info-card-title">{detailLabels.faq}</h2>
+          <details className="info-card">
+            <summary>{extra.faq[0]}</summary>
+            <p>{extra.faq[1]}</p>
+          </details>
+        </section>
         <p className="about-text"><a href={data.source}>{labels.source}</a></p>
       </article>
       <aside className="info-card">
