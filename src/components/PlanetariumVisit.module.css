@@ -66,3 +66,63 @@
 .directory {
   margin-top: 1rem;
 }
+
+.guide {
+  overflow-wrap: anywhere;
+}
+
+.facts {
+  display: grid;
+  gap: 0.2rem;
+  margin-top: 0.9rem;
+}
+
+.facts dt {
+  font-weight: 600;
+}
+
+.facts dd + dt {
+  margin-top: 0.5rem;
+}
+
+.facts a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.related:hover h3,
+.related:focus-visible h3 {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.relatedDirectory {
+  margin-top: 1.25rem;
+}
+
+.relatedDirectory summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.relatedDirectory ul {
+  columns: 13rem;
+  margin-top: 0.75rem;
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.relatedDirectory li {
+  break-inside: avoid;
+  margin-block: 0.35rem;
+}
+
+.location .actions > a {
+  color: inherit;
+  border-color: currentColor;
+}
+
+.location .actions > a:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 0.2rem;
+}

@@ -691,7 +691,7 @@ export const nearbyCopy = {
       transit: "Baja en Miranda, Línea 1. Entra al parque por la avenida Francisco de Miranda y busca la cúpula blanca cerca de la entrada.",
       history: "Carlos Guinand Sandoz diseñó el edificio. Su proyector óptico Zeiss es una pieza de la historia de la divulgación astronómica caraqueña.",
       plan: "Si hay función, confirma la hora antes de recorrer el parque. Si solo quieres ver la arquitectura, observa la cúpula y continúa hacia los patios ornamentales.",
-      photo: "Exterior del Planetario Humboldt, fotografía de archivo",
+      photo: "Interior del Planetario Humboldt, fotografía de archivo",
     },
     "museo-del-transporte": {
       title: "Museo del Transporte Guillermo José Schael",
@@ -1003,7 +1003,7 @@ export const nearbyCopy = {
       transit: "Take Line 1 to Miranda. Enter East Park from Avenida Francisco de Miranda and look for the white dome near the entrance.",
       history: "Carlos Guinand Sandoz designed the building. Its Zeiss optical projector is part of the history of astronomy education in Caracas.",
       plan: "If a show is available, check the start time before exploring the park. For a shorter architectural visit, see the dome and continue to the ornamental courtyards.",
-      photo: "Humboldt Planetarium exterior, archival photograph",
+      photo: "Humboldt Planetarium interior, archival photograph",
     },
     "museo-del-transporte": {
       title: "Guillermo José Schael Transport Museum",
@@ -1315,7 +1315,7 @@ export const nearbyCopy = {
       transit: "搭地鐵 1 號線至米蘭達站，從弗朗西斯科・德・米蘭達大道進入公園，留意入口附近的白色圓頂。",
       history: "建築由卡洛斯・吉南・桑多斯設計。館內的蔡司光學投影機見證了卡拉卡斯的天文教育史。",
       plan: "若要看放映，先確認開演時間再安排園內步行。短程遊覽可從外面觀察圓頂，再往景觀庭院走。",
-      photo: "洪堡天文館外觀，歷史照片",
+      photo: "洪堡天文館內部，歷史照片",
     },
     "museo-del-transporte": {
       title: "吉列爾莫・何塞・沙埃爾交通博物館",
