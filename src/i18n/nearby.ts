@@ -1,6 +1,19 @@
-export const nearbyTopics = ["planetario-humboldt", "museo-del-transporte", "plaza-francia", "la-estancia", "lago-9-leander", "patios-ornamentales", "jardin-xerofitico", "concha-acustica", "aviario", "terrario", "parque-simon-bolivar", "fuente-las-cortinas", "plaza-bolivar-chacao", "iglesia-san-jose-chacao"] as const;
+export const nearbyTopics = ["planetario-humboldt", "museo-del-transporte", "plaza-francia", "la-estancia", "lago-9-leander", "patios-ornamentales", "jardin-xerofitico", "concha-acustica", "aviario", "terrario", "parque-simon-bolivar", "fuente-las-cortinas", "plaza-bolivar-chacao", "iglesia-san-jose-chacao", "biblioteca-los-palos-grandes"] as const;
 
 export const nearbyPlaces = {
+  "biblioteca-los-palos-grandes": {
+    map: "https://www.google.com/maps/search/?api=1&query=Biblioteca+Los+Palos+Grandes%2C+3ra+Avenida+con+2da+Transversal%2C+Chacao%2C+Caracas",
+    address: "3.ª Avenida con 2.ª Transversal, Plaza Los Palos Grandes, Chacao, Caracas, Miranda",
+    photo: "/nearby/biblioteca-los-palos-grandes.jpg",
+    width: 330,
+    height: 220,
+    author: "Patriciacvegas",
+    credit: "https://commons.wikimedia.org/wiki/File:Plaza_Los_Palos_Grandes.JPG",
+    source: "https://guiaccs.com/obras/plaza-los-palos-grandes/",
+    operatorSource: "https://bidce.org/experience_to_pdf.php?id=219&lang=es",
+    license: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/",
+  },
   "iglesia-san-jose-chacao": {
     map: "https://www.google.com/maps/search/?api=1&query=Iglesia+San+Jos%C3%A9+de+Chacao%2C+Avenida+Mohedano%2C+Chacao%2C+Caracas",
     address: "Avenida Mohedano, Plaza Bolívar de Chacao, Caracas 1060, Miranda, Venezuela",
@@ -187,6 +200,16 @@ export const parkDetails = {
 
 export const nearbyCopy = {
   es: {
+    "biblioteca-los-palos-grandes": {
+      title: "Biblioteca Los Palos Grandes",
+      description: "Una biblioteca pública junto a la plaza del barrio, en Chacao.",
+      manager: "Alcaldía de Chacao · Cultura Chacao.",
+      basics: "Biblioteca municipal en la esquina de la 3.ª Avenida y la 2.ª Transversal. Consulta el acceso, horarios y actividades con Cultura Chacao.",
+      transit: "Desde el metro Miranda, toma las calles de Los Palos Grandes hasta la 3.ª Avenida con 2.ª Transversal.",
+      history: "La biblioteca se inauguró en 2011. El edificio cultural ocupa el borde norte de la plaza y reúne espacios de lectura y una ludoteca.",
+      plan: "Si vas con niños, pregunta por la ludoteca. Reserva un rato para ver la relación entre la plaza y el edificio.",
+      photo: "Vista exterior de la Plaza Los Palos Grandes, donde se ubica la biblioteca",
+    },
     "iglesia-san-jose-chacao": {
       title: "Iglesia de San José de Chacao",
       description: "Un templo de tres naves en el lado norte de la plaza Bolívar de Chacao.",
@@ -329,6 +352,16 @@ export const nearbyCopy = {
     },
   },
   en: {
+    "biblioteca-los-palos-grandes": {
+      title: "Los Palos Grandes Public Library",
+      description: "A neighbourhood library on a public square in Chacao.",
+      manager: "Municipality of Chacao · Cultura Chacao.",
+      basics: "Municipal library at 3rd Avenue and 2nd Transversal. Check opening, access and activities with Cultura Chacao.",
+      transit: "From Miranda metro station, walk through Los Palos Grandes to 3rd Avenue and 2nd Transversal.",
+      history: "The library opened in 2011. The cultural building on the north side of the square houses reading spaces and a children’s play library.",
+      plan: "If visiting with children, ask about the play library. Allow time to see how the building and square work together.",
+      photo: "Exterior view of Plaza Los Palos Grandes, home to the library",
+    },
     "iglesia-san-jose-chacao": {
       title: "San José Church in Chacao",
       description: "A three-aisled parish church on the north side of Bolívar Square in Chacao.",
@@ -471,6 +504,16 @@ export const nearbyCopy = {
     },
   },
   zh: {
+    "biblioteca-los-palos-grandes": {
+      title: "洛斯帕洛斯格蘭德斯公共圖書館",
+      description: "查考區廣場旁的社區公共圖書館。",
+      manager: "查考市政府與市文化部門（Cultura Chacao）。",
+      basics: "市立圖書館位於第三大道與第二橫街交會處。開放與活動請向查考市文化部門查詢。",
+      transit: "從米蘭達地鐵站往社區內步行，到第三大道與第二橫街路口。",
+      history: "圖書館於 2011 年開館。廣場北側的文化建築內有閱讀空間與兒童遊戲圖書室。",
+      plan: "帶孩子可詢問兒童空間是否開放，也可留時間觀察圖書館與廣場如何銜接。",
+      photo: "圖書館所在的洛斯帕洛斯格蘭德斯廣場外景",
+    },
     "iglesia-san-jose-chacao": {
       title: "查考聖何塞教堂",
       description: "在查考玻利瓦爾廣場北側，認識舊城的三廊式教堂。",

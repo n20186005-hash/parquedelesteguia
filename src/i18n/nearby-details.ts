@@ -6,6 +6,13 @@ export const nearbyDetailLabels = {
 
 export const nearbyDetails = {
   es: {
+    "biblioteca-los-palos-grandes": {
+      about: "La Alcaldía impulsó el conjunto con participación vecinal. La biblioteca municipal amplía el uso de la plaza con espacios para leer y reunirse.",
+      observe: "Busca el edificio estrecho del lado norte y observa cómo deja libre el centro de la plaza.",
+      walk: ["Desde Miranda, camina hacia el interior del barrio.", "Llega al cruce de la 3.ª Avenida y la 2.ª Transversal.", "Cruza la plaza hacia el edificio del lado norte."],
+      photo: "Desde el área pública de la plaza, encuadra el borde norte y la estructura de sombra.",
+      faq: ["¿La entrada a la plaza garantiza el acceso a la biblioteca?", "Consulta con Cultura Chacao los horarios de la biblioteca y de cualquier actividad en la que quieras participar."],
+    },
     "iglesia-san-jose-chacao": {
       about: "La parroquia organiza el culto y la atención parroquial. Su sitio oficial publica por separado los horarios del despacho y de los servicios religiosos.",
       observe: "Desde la plaza, observa la fachada y el campanario; si se puede entrar, compara la nave central con las laterales.",
@@ -106,6 +113,13 @@ export const nearbyDetails = {
     },
   },
   en: {
+    "biblioteca-los-palos-grandes": {
+      about: "The municipality developed the complex with local participation. The library gives the square places to read and meet.",
+      observe: "Look for the narrow building on the north edge and notice how it leaves the centre of the square open.",
+      walk: ["Walk from Miranda station into the neighbourhood.", "Reach the corner of 3rd Avenue and 2nd Transversal.", "Cross the square to the building on its north side."],
+      photo: "From the public square, frame the north edge together with the shade structure.",
+      faq: ["Does access to the square include access to the library?", "Check library hours and the schedule for any activity you want to attend with Cultura Chacao."],
+    },
     "iglesia-san-jose-chacao": {
       about: "The parish oversees worship and parish services. Its official site lists parish office hours separately from Mass times.",
       observe: "Observe the façade and bell tower from the square. If interior access is available, compare the central aisle with the side aisles.",
@@ -206,6 +220,13 @@ export const nearbyDetails = {
     },
   },
   zh: {
+    "biblioteca-los-palos-grandes": {
+      about: "市政府與社區共同推動這座公共空間。市立圖書館讓廣場周邊也有閱讀和交流場所。",
+      observe: "留意北側狹長的館舍如何把廣場中央留作開放空間。",
+      walk: ["從米蘭達站走入社區。", "步行至第三大道與第二橫街路口。", "穿過廣場，前往北側的圖書館。"],
+      photo: "可在公共廣場上把北側建築與遮蔭構架一起取景。",
+      faq: ["廣場開放時也能進圖書館嗎？", "請向查考市文化部門查詢圖書館和各項活動的開放時段。"],
+    },
     "iglesia-san-jose-chacao": {
       about: "堂區負責禮拜及堂務服務。官網分別列出堂務辦公時間與彌撒時段。",
       observe: "先在廣場辨認立面與鐘樓。若當天可入內，可比較中廊與兩側走道的配置。",
