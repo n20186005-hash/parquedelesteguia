@@ -6,6 +6,13 @@ export const nearbyDetailLabels = {
 
 export const nearbyDetails = {
   es: {
+    "plaza-francia": {
+      about: "La Alcaldía de Chacao ha realizado trabajos de recuperación en esta plaza, que conecta la estación Altamira con el espacio público del barrio.",
+      observe: "Observa cómo la línea vertical del obelisco contrasta con la extensión horizontal de la plaza y cómo cambia su silueta al rodearlo.",
+      walk: ["Sal de la estación Altamira hacia Plaza Francia.", "Recorre el espacio público hasta el obelisco y observa el entorno desde dos lados.", "Regresa al metro y baja en Miranda para visitar el Parque del Este."],
+      photo: "Desde un lateral de la plaza, encuadra la base y la punta del obelisco sin salir del espacio peatonal.",
+      faq: ["¿Es la misma que Plaza Altamira?", "Sí. Plaza Altamira es el nombre con el que se inauguró y todavía se usa para identificarla."],
+    },
     "planetario-humboldt": {
       about: "La cúpula blanca, visible cerca de la entrada del Parque del Este, alberga un espacio dedicado a la enseñanza de la astronomía. La programación se consulta con el planetario.",
       observe: "Desde el exterior, compara la cúpula con los edificios bajos que la rodean. La proyección óptica Zeiss permite explicar cómo se representaba el cielo desde una sala cerrada.",
@@ -22,6 +29,13 @@ export const nearbyDetails = {
     },
   },
   en: {
+    "plaza-francia": {
+      about: "Chacao’s municipal government has carried out restoration work on this square, which connects Altamira station to the neighbourhood’s public space.",
+      observe: "Look for the contrast between the vertical obelisk and the low, open square. Walk around the monument to see the silhouette from another side.",
+      walk: ["Leave Altamira station at Plaza Francia.", "Walk to the obelisk and view the surrounding square from two sides.", "Return to the metro and get off at Miranda for East Park."],
+      photo: "Frame the base and tip from one side of the square while staying in the pedestrian area.",
+      faq: ["Is this also Plaza Altamira?", "Yes. Plaza Altamira was its opening name and is still used locally."],
+    },
     "planetario-humboldt": {
       about: "The white dome near the East Park entrance houses a venue for astronomy education. Check its programme directly with the planetarium.",
       observe: "Outside, compare the curve of the dome with the low buildings around it. The Zeiss optical projector illustrates how a night sky could be recreated inside an enclosed room.",
@@ -38,6 +52,13 @@ export const nearbyDetails = {
     },
   },
   zh: {
+    "plaza-francia": {
+      about: "查考市政府曾整修這座廣場。這裡銜接阿爾塔米拉地鐵站和社區的公共空間。",
+      observe: "留意方尖碑的垂直線條與廣場橫向空間的對比，繞到另一側比較碑身輪廓。",
+      walk: ["從阿爾塔米拉站走法國廣場出口。", "走到方尖碑，在兩側觀察碑身及周圍廣場。", "返回地鐵，下一站米蘭達可續遊東方公園。"],
+      photo: "從廣場一側的行人區取景，讓碑座與碑尖同時入鏡。",
+      faq: ["這裡也是阿爾塔米拉廣場嗎？", "是。阿爾塔米拉廣場是啟用時的名稱，至今仍在使用。"],
+    },
     "planetario-humboldt": {
       about: "入口附近的白色圓頂是公園的天文教育場館，場次可向天文館查詢。",
       observe: "可從步道比較圓頂曲線與周邊低矮建築。蔡司光學投影機則呈現了早期如何在室內重現星空。",

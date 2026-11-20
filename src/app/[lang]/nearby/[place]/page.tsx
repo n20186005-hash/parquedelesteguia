@@ -72,7 +72,7 @@ export default async function NearbyPlace({ params }: Props) {
         </section>
         <figure style={{ marginBlock: "2rem" }}>
           <Image src={data.photo} alt={copy.photo} width={data.width} height={data.height} unoptimized style={{ maxWidth: "100%", width: "auto", height: "auto", maxHeight: "28rem" }} />
-          <figcaption className="info-card-note">{copy.photo} · <a href={data.credit}>Veronidae / Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></figcaption>
+          <figcaption className="info-card-note">{copy.photo} · <a href={data.credit}>{"author" in data ? data.author : "Veronidae"} / Wikimedia Commons</a> · <a href={"licenseUrl" in data ? data.licenseUrl : "https://creativecommons.org/licenses/by-sa/3.0/"}>{"license" in data ? data.license : "CC BY-SA 3.0"}</a></figcaption>
         </figure>
         <section>
           <h2 className="info-card-title">{detailLabels.history}</h2>
@@ -96,8 +96,10 @@ export default async function NearbyPlace({ params }: Props) {
           </section>
           <section className="info-card">
             <h2 className="info-card-title">{labels.reviews}</h2>
+            {"rating" in data && <>
             <p><strong>{data.rating.score} / 5</strong> · {new Intl.NumberFormat(lang === "es" ? "es-VE" : lang).format(data.rating.count)} {labels.count}</p>
             <p className="info-card-note">{labels.checked} · <a href={data.rating.url}>{data.rating.name}</a></p>
+            </>}
             <a href={data.map}>{labels.view}</a>
           </section>
         </div>
@@ -122,9 +124,11 @@ export default async function NearbyPlace({ params }: Props) {
       </article>
       <aside className="info-card">
         <h2 className="info-card-title">{labels.nearby}</h2>
+        <ul>
         {nearbyTopics.filter((item) => item !== place).map((item) => (
-          <Link key={item} href={`/${lang}/nearby/${item}`}>{nearbyCopy[lang][item].title}</Link>
+          <li key={item}><Link href={`/${lang}/nearby/${item}`}>{nearbyCopy[lang][item].title}</Link></li>
         ))}
+        </ul>
       </aside>
     </main>
   );

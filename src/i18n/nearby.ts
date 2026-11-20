@@ -1,6 +1,19 @@
-export const nearbyTopics = ["planetario-humboldt", "museo-del-transporte"] as const;
+export const nearbyTopics = ["planetario-humboldt", "museo-del-transporte", "plaza-francia"] as const;
 
 export const nearbyPlaces = {
+  "plaza-francia": {
+    map: "https://www.google.com/maps/search/?api=1&query=Plaza+Francia+de+Altamira%2C+Chacao%2C+Caracas",
+    address: "Avenida Francisco de Miranda, Altamira, Chacao, Caracas, Miranda",
+    photo: "/nearby/plaza-francia.jpg",
+    width: 250,
+    height: 333,
+    author: "ELARVLO",
+    license: "CC BY 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
+    credit: "https://commons.wikimedia.org/wiki/File:Plaza_Francia,_Altamira,_Caracas.jpg",
+    source: "https://adc.knoios.com/alcaldia_de_chacao/mmedia/archivos/chacao%20-%20google%20play%20%281%29.pdf",
+    operatorSource: "https://cronica.uno/alcaldia-chacao-rehabilitara-plaza-francia-altamira/",
+  },
   "planetario-humboldt": {
     map: "https://www.google.com/maps/search/?api=1&query=Planetario+Humboldt%2C+Caracas",
     address: "Avenida Francisco de Miranda, Parque del Este, Caracas 1071, Miranda",
@@ -38,6 +51,16 @@ export const parkDetails = {
 
 export const nearbyCopy = {
   es: {
+    "plaza-francia": {
+      title: "Plaza Francia de Altamira",
+      description: "El obelisco de Chacao sobre la estación Altamira del metro de Caracas.",
+      manager: "Alcaldía de Chacao.",
+      basics: "Plaza pública en Altamira. Las actividades y obras pueden modificar el acceso a algunos sectores.",
+      transit: "Toma la Línea 1 a Altamira. Usa la salida de Plaza Francia y los cruces peatonales de la avenida Francisco de Miranda.",
+      history: "La plaza se inauguró en 1945 como Plaza Altamira. Su diseño se atribuye a Arthur Kahn y su construcción a Luis Roche.",
+      plan: "Dedica una parada al obelisco y luego continúa hacia el Parque del Este en metro hasta Miranda.",
+      photo: "Plaza Francia y obelisco de Altamira",
+    },
     "planetario-humboldt": {
       title: "Planetario Humboldt",
       description: "Una visita de astronomía bajo la cúpula blanca del Parque del Este de Caracas.",
@@ -60,6 +83,16 @@ export const nearbyCopy = {
     },
   },
   en: {
+    "plaza-francia": {
+      title: "Plaza Francia in Altamira",
+      description: "Chacao’s obelisk square above the Altamira metro station in Caracas.",
+      manager: "Municipality of Chacao.",
+      basics: "Public square in Altamira. Events and maintenance can affect access to parts of the square.",
+      transit: "Take Line 1 to Altamira. Follow the Plaza Francia exit and use marked crossings on Avenida Francisco de Miranda.",
+      history: "The square opened in 1945 as Plaza Altamira. Its design is attributed to Arthur Kahn and its construction to Luis Roche.",
+      plan: "Stop at the obelisk, then take the metro to Miranda to continue to East Park.",
+      photo: "Plaza Francia and the Altamira obelisk",
+    },
     "planetario-humboldt": {
       title: "Humboldt Planetarium",
       description: "An astronomy stop beneath the white dome inside East Park, Caracas.",
@@ -82,6 +115,16 @@ export const nearbyCopy = {
     },
   },
   zh: {
+    "plaza-francia": {
+      title: "阿爾塔米拉法國廣場",
+      description: "在卡拉卡斯阿爾塔米拉地鐵站上方，透過方尖碑認識查考市的公共廣場。",
+      manager: "查考市政府。",
+      basics: "阿爾塔米拉的公共廣場。活動或工程可能影響部分區域的通行。",
+      transit: "搭地鐵 1 號線至阿爾塔米拉站，循法國廣場出口，過弗朗西斯科・德・米蘭達大道時使用行人穿越道。",
+      history: "廣場在 1945 年以阿爾塔米拉廣場之名啟用，由亞瑟・卡恩設計、路易斯・羅切興建。",
+      plan: "看完方尖碑，可搭地鐵至米蘭達站續遊東方公園。",
+      photo: "法國廣場與阿爾塔米拉方尖碑",
+    },
     "planetario-humboldt": {
       title: "洪堡天文館",
       description: "走進卡拉卡斯東方公園，認識白色圓頂下的天文教育場館。",
