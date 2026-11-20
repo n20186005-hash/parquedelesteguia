@@ -6,6 +6,13 @@ export const nearbyDetailLabels = {
 
 export const nearbyDetails = {
   es: {
+    "mercado-municipal-chacao": {
+      about: "El instituto municipal se ocupa de la gestión del mercado y publica avisos y resoluciones.",
+      observe: "Desde Mohedano, observa cómo la entrada pone en relación la calle y los puestos bajo techo.",
+      walk: ["Sal del metro Chacao hacia el casco histórico.", "Localiza el acceso del mercado entre las calles Ávila y Urdaneta.", "Después puedes seguir por Mohedano hacia la Plaza Bolívar de Chacao."],
+      photo: "Fotografía la fachada desde la acera y pide permiso para retratar puestos o personas.",
+      faq: ["¿Todos los puestos tienen el mismo horario?", "Consulta el horario general con el mercado y confirma el del puesto si buscas algo concreto."],
+    },
     "biblioteca-los-palos-grandes": {
       about: "La Alcaldía impulsó el conjunto con participación vecinal. La biblioteca municipal amplía el uso de la plaza con espacios para leer y reunirse.",
       observe: "Busca el edificio estrecho del lado norte y observa cómo deja libre el centro de la plaza.",
@@ -113,6 +120,13 @@ export const nearbyDetails = {
     },
   },
   en: {
+    "mercado-municipal-chacao": {
+      about: "The municipal institute manages the market and publishes notices and resolutions.",
+      observe: "From Avenida Mohedano, look at how the entrance connects the street to the covered stalls.",
+      walk: ["Leave Chacao station toward the historic centre.", "Find the market entrance between Ávila and Urdaneta streets.", "Continue along Avenida Mohedano to Bolívar Square if time permits."],
+      photo: "Photograph the façade from the pavement and ask before photographing stalls or people.",
+      faq: ["Do all stalls keep the same hours?", "Check the market’s general hours and confirm individual stall hours if looking for something specific."],
+    },
     "biblioteca-los-palos-grandes": {
       about: "The municipality developed the complex with local participation. The library gives the square places to read and meet.",
       observe: "Look for the narrow building on the north edge and notice how it leaves the centre of the square open.",
@@ -220,6 +234,13 @@ export const nearbyDetails = {
     },
   },
   zh: {
+    "mercado-municipal-chacao": {
+      about: "查考市自治市場管理局管理市場，並公布市場通知與決議。",
+      observe: "從莫埃達諾大道觀察入口如何連接街道與有遮蔽的攤位。",
+      walk: ["從查考站往舊城區步行。", "在阿維拉街與烏達內塔街之間找到市場入口。", "時間充裕可沿莫埃達諾大道續往查考玻利瓦爾廣場。"],
+      photo: "在人行道拍攝市場外觀，拍攝攤位或人物前先徵求同意。",
+      faq: ["所有攤位的營業時間都一樣嗎？", "可先向市場查詢整體營業時間，有特定採買需求時再確認該攤位的營業時段。"],
+    },
     "biblioteca-los-palos-grandes": {
       about: "市政府與社區共同推動這座公共空間。市立圖書館讓廣場周邊也有閱讀和交流場所。",
       observe: "留意北側狹長的館舍如何把廣場中央留作開放空間。",

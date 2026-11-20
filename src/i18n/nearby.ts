@@ -1,6 +1,19 @@
-export const nearbyTopics = ["planetario-humboldt", "museo-del-transporte", "plaza-francia", "la-estancia", "lago-9-leander", "patios-ornamentales", "jardin-xerofitico", "concha-acustica", "aviario", "terrario", "parque-simon-bolivar", "fuente-las-cortinas", "plaza-bolivar-chacao", "iglesia-san-jose-chacao", "biblioteca-los-palos-grandes"] as const;
+export const nearbyTopics = ["planetario-humboldt", "museo-del-transporte", "plaza-francia", "la-estancia", "lago-9-leander", "patios-ornamentales", "jardin-xerofitico", "concha-acustica", "aviario", "terrario", "parque-simon-bolivar", "fuente-las-cortinas", "plaza-bolivar-chacao", "iglesia-san-jose-chacao", "biblioteca-los-palos-grandes", "mercado-municipal-chacao"] as const;
 
 export const nearbyPlaces = {
+  "mercado-municipal-chacao": {
+    map: "https://www.google.com/maps/search/?api=1&query=Mercado+Municipal+de+Chacao%2C+Avenida+Mohedano%2C+entre+calles+%C3%81vila+y+Urdaneta%2C+Chacao%2C+Caracas",
+    address: "Avenida Mohedano, entre calles Ávila y Urdaneta, Chacao, Caracas",
+    photo: "/nearby/mercado-municipal-chacao.jpg",
+    width: 330,
+    height: 247,
+    author: "Guillermo Ramos Flamerich",
+    credit: "https://commons.wikimedia.org/wiki/File:Municipal_Market_of_Chacao.jpg",
+    source: "https://guiaccs.com/obras/parque-gibran-kahlil-gibran-2/",
+    operatorSource: "https://mercadomunicipaldechacao.com.ve/",
+    license: "CC BY-SA 3.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/",
+  },
   "biblioteca-los-palos-grandes": {
     map: "https://www.google.com/maps/search/?api=1&query=Biblioteca+Los+Palos+Grandes%2C+3ra+Avenida+con+2da+Transversal%2C+Chacao%2C+Caracas",
     address: "3.ª Avenida con 2.ª Transversal, Plaza Los Palos Grandes, Chacao, Caracas, Miranda",
@@ -200,6 +213,16 @@ export const parkDetails = {
 
 export const nearbyCopy = {
   es: {
+    "mercado-municipal-chacao": {
+      title: "Mercado Municipal de Chacao",
+      description: "Un mercado de abastos en el casco histórico de Chacao.",
+      manager: "Instituto Autónomo de Mercados del Municipio Chacao.",
+      basics: "Mercado municipal en la avenida Mohedano, entre Ávila y Urdaneta. Consulta el horario antes de ir.",
+      transit: "Baja en Chacao, Línea 1, y sigue hacia el casco histórico hasta la avenida Mohedano.",
+      history: "El edificio se desarrolló entre 2006 y 2008 como primera etapa de un proyecto cívico. El mercado del casco había combinado durante años puestos fijos y ventas callejeras temporales.",
+      plan: "Recorre los pasillos abiertos sin detenerte en las zonas de carga. Pregunta a los vendedores por los productos de temporada.",
+      photo: "Mercado Municipal de Chacao, fotografía de 2008",
+    },
     "biblioteca-los-palos-grandes": {
       title: "Biblioteca Los Palos Grandes",
       description: "Una biblioteca pública junto a la plaza del barrio, en Chacao.",
@@ -352,6 +375,16 @@ export const nearbyCopy = {
     },
   },
   en: {
+    "mercado-municipal-chacao": {
+      title: "Chacao Municipal Market",
+      description: "A produce market in Chacao’s historic centre.",
+      manager: "Autonomous Markets Institute of Chacao Municipality.",
+      basics: "Municipal market on Avenida Mohedano between Ávila and Urdaneta. Check hours before visiting.",
+      transit: "Take Metro Line 1 to Chacao and walk toward the historic centre and Avenida Mohedano.",
+      history: "The market building was developed between 2006 and 2008 as the first stage of a civic project. The historic market had long combined fixed stalls and temporary street vendors.",
+      plan: "Use open aisles and keep loading areas clear. Ask vendors what produce is in season.",
+      photo: "Chacao Municipal Market, archival photograph from 2008",
+    },
     "biblioteca-los-palos-grandes": {
       title: "Los Palos Grandes Public Library",
       description: "A neighbourhood library on a public square in Chacao.",
@@ -504,6 +537,16 @@ export const nearbyCopy = {
     },
   },
   zh: {
+    "mercado-municipal-chacao": {
+      title: "查考市立市場",
+      description: "在查考舊城逛市立生鮮市場。",
+      manager: "查考市自治市場管理局。",
+      basics: "市立市場位於莫埃達諾大道，介於阿維拉街與烏達內塔街之間。出發前請查詢開放時間。",
+      transit: "搭地鐵 1 號線到查考站，往舊城區及莫埃達諾大道步行。",
+      history: "現有建築於 2006 至 2008 年間興建，是市政中心計畫的第一階段。舊城的市場過去同時有固定攤位與臨時街攤。",
+      plan: "沿開放走道逛市場，讓出卸貨區，也可問攤商有哪些當季食材。",
+      photo: "查考市立市場，2008 年歷史照片",
+    },
     "biblioteca-los-palos-grandes": {
       title: "洛斯帕洛斯格蘭德斯公共圖書館",
       description: "查考區廣場旁的社區公共圖書館。",
