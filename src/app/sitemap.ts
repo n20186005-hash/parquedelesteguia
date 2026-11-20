@@ -32,13 +32,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // Add the root route
-  sitemapEntries.push({
-    url: `${baseUrl}/`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly',
-    priority: 0.5,
-  });
-
   return sitemapEntries;
 }
