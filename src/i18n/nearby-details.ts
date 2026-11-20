@@ -6,6 +6,13 @@ export const nearbyDetailLabels = {
 
 export const nearbyDetails = {
   es: {
+    "fuente-las-cortinas": {
+      about: "INPARQUES gestiona el parque. La fuente es una parada corta en el recorrido por los patios del sector norte.",
+      observe: "Cuando circula el agua, observa cómo la caída vertical contrasta con el borde horizontal del estanque.",
+      walk: ["Entra por el acceso de Miranda.", "Busca la fuente a la izquierda y rodéala por los pasos abiertos.", "Sigue hacia los patios ornamentales o vuelve a la avenida."],
+      photo: "Desde el sendero lateral, encuadra el borde del estanque y la caída de agua sin entrar al área mojada.",
+      faq: ["¿La fuente está siempre encendida?", "El funcionamiento puede cambiar durante el día. Consulta el estado en el parque si vas específicamente a fotografiar el agua."],
+    },
     "parque-simon-bolivar": {
       about: "El parque reutiliza parte de La Carlota como espacio recreativo. El lago artificial y sus caminos son referencias para orientarse.",
       observe: "Desde la ribera mira cómo la horizontal del lago enmarca la silueta de El Ávila.",
@@ -85,6 +92,13 @@ export const nearbyDetails = {
     },
   },
   en: {
+    "fuente-las-cortinas": {
+      about: "INPARQUES manages the park. The fountain is a short stop on a walk through the northern courtyards.",
+      observe: "When the water is running, compare its vertical fall with the horizontal edge of the pool.",
+      walk: ["Enter at the Miranda gate.", "Find the fountain to the left and follow the open paths around it.", "Continue to the ornamental courtyards or return to the avenue."],
+      photo: "From the side path, frame the pool edge and falling water without stepping onto wet surfaces.",
+      faq: ["Does the fountain run all day?", "Operation can vary. Check at the park if you are visiting specifically to photograph the water."],
+    },
     "parque-simon-bolivar": {
       about: "The park turns part of La Carlota into public recreation space. Its artificial lake and shore paths help visitors get oriented.",
       observe: "From the shore, look at how the horizontal line of the lake frames the silhouette of El Ávila.",
@@ -164,6 +178,13 @@ export const nearbyDetails = {
     },
   },
   zh: {
+    "fuente-las-cortinas": {
+      about: "公園由 INPARQUES 管理。遊覽北側庭院時，可順路停留看水幕。",
+      observe: "水景啟用時，可比較垂直水幕與水平池沿的線條。",
+      walk: ["由米蘭達入口進園。", "找入口左側的噴泉，沿開放步道繞行。", "續往景觀庭院，或原路返回大道。"],
+      photo: "在側邊步道把池沿與落水同時入鏡，避開濕滑區域。",
+      faq: ["噴泉整天都運作嗎？", "運作狀態可能調整。如果專程拍攝水幕，可先向公園人員確認。"],
+    },
     "parque-simon-bolivar": {
       about: "公園將拉卡洛塔部分舊機場用地轉作公共遊憩空間。人工湖及環湖步道是辨認方向的地標。",
       observe: "從湖畔觀察水面橫向線條如何襯托阿維拉山的輪廓。",

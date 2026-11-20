@@ -1,6 +1,18 @@
-export const nearbyTopics = ["planetario-humboldt", "museo-del-transporte", "plaza-francia", "la-estancia", "lago-9-leander", "patios-ornamentales", "jardin-xerofitico", "concha-acustica", "aviario", "terrario", "parque-simon-bolivar"] as const;
+export const nearbyTopics = ["planetario-humboldt", "museo-del-transporte", "plaza-francia", "la-estancia", "lago-9-leander", "patios-ornamentales", "jardin-xerofitico", "concha-acustica", "aviario", "terrario", "parque-simon-bolivar", "fuente-las-cortinas"] as const;
 
 export const nearbyPlaces = {
+  "fuente-las-cortinas": {
+    map: "https://www.google.com/maps/search/?api=1&query=Fuente+Las+Cortinas%2C+Parque+del+Este%2C+Caracas",
+    address: "Sector norte, Parque Generalísimo Francisco de Miranda, avenida Francisco de Miranda, Caracas 1071, Miranda",
+    photo: "/nearby/fuente-las-cortinas.jpg",
+    width: 250,
+    height: 333,
+    author: "Owenforever",
+    credit: "https://commons.wikimedia.org/wiki/File:Fuente_Cortina_de_agua._Parque_General%C3%ADsimo_Francisco_De_Miranda_%28Parque_del_Este%29_Caracas%2C_Venezuela.jpg",
+    source: "https://www.inparques.gob.ve/Parques%20de%20Recreacion/francisco-de-miranda.html",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+  },
   "parque-simon-bolivar": {
     map: "https://www.google.com/maps/search/?api=1&query=Parque+Sim%C3%B3n+Bol%C3%ADvar%2C+La+Carlota%2C+Caracas",
     address: "Sector La Carlota, parroquia Leoncio Martínez, municipio Sucre, Miranda, Venezuela",
@@ -150,6 +162,16 @@ export const parkDetails = {
 
 export const nearbyCopy = {
   es: {
+    "fuente-las-cortinas": {
+      title: "Fuente Las Cortinas",
+      description: "Una cortina de agua en el sector norte del Parque del Este.",
+      manager: "Instituto Nacional de Parques (INPARQUES).",
+      basics: "Fuente exterior cerca del acceso principal. Su funcionamiento puede variar.",
+      transit: "Desde la estación Miranda, entra por la avenida Francisco de Miranda y busca la fuente a la izquierda del acceso.",
+      history: "La fuente pertenece al sector de patios y elementos acuáticos del parque inaugurado en 1961. El diseño paisajístico del conjunto estuvo a cargo de Roberto Burle Marx y su equipo.",
+      plan: "Detente primero frente a la fuente y después observa el borde del estanque desde el sendero lateral.",
+      photo: "Fuente Las Cortinas en el Parque del Este",
+    },
     "parque-simon-bolivar": {
       title: "Parque Simón Bolívar de La Carlota",
       description: "Paseos junto al Lago Libertad en parte del antiguo aeródromo de La Carlota.",
@@ -262,6 +284,16 @@ export const nearbyCopy = {
     },
   },
   en: {
+    "fuente-las-cortinas": {
+      title: "Las Cortinas Fountain",
+      description: "A water curtain in East Park’s northern sector.",
+      manager: "National Parks Institute (INPARQUES).",
+      basics: "Outdoor fountain near the main entrance. Operation can vary.",
+      transit: "From Miranda station, enter on Avenida Francisco de Miranda and look for the fountain to the left.",
+      history: "The fountain belongs to the courtyard and water-feature area of the park inaugurated in 1961. Roberto Burle Marx and his team designed the wider landscape.",
+      plan: "Start with a frontal view, then look along the pool edge from the side path.",
+      photo: "Las Cortinas Fountain in East Park",
+    },
     "parque-simon-bolivar": {
       title: "Simón Bolívar Park at La Carlota",
       description: "Walks around Lake Libertad on part of the former La Carlota airfield.",
@@ -374,6 +406,16 @@ export const nearbyCopy = {
     },
   },
   zh: {
+    "fuente-las-cortinas": {
+      title: "水幕噴泉",
+      description: "在東方公園北側看水流垂落成幕。",
+      manager: "委內瑞拉國家公園管理局（INPARQUES）。",
+      basics: "主入口附近的戶外噴泉，水景運作以現場為準。",
+      transit: "從米蘭達站經弗朗西斯科・德・米蘭達大道入園，留意入口左側的噴泉。",
+      history: "噴泉屬公園庭院水景區。公園於 1961 年啟用，整體園林由羅伯托・布爾勒・馬克思及其團隊設計。",
+      plan: "先從正面看水幕，再沿側邊步道觀察池沿。",
+      photo: "東方公園水幕噴泉實景",
+    },
     "parque-simon-bolivar": {
       title: "拉卡洛塔西蒙・玻利瓦爾公園",
       description: "在拉卡洛塔舊機場的一部分土地上，沿自由湖步道散步。",
